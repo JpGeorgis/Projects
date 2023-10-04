@@ -1,0 +1,39 @@
+Morceau de texte : Exemple de texte de test
+Ligne vide
+Balise de titre
+Morceau de texte : avec un titre de niveau 1
+Fin de titre
+Balise de titre
+Morceau de texte : et un titre de niveau 2
+Fin de titre
+Début de liste
+Morceau de texte : une liste comportant 3 items
+Item de liste
+Morceau de texte : le second avec un texte non formatté
+Item de liste
+Morceau de texte : et le troisième avec un texte
+Etoile
+Morceau de texte : en italique
+Etoile
+Fin de liste
+Morceau de texte : puis un texte
+Etoile
+Etoile
+Morceau de texte : en gras
+Etoile
+Etoile
+Morceau de texte : et un autre
+Etoile
+Etoile
+Etoile
+Morceau de texte : en gras italique
+Etoile
+Etoile
+Etoile
+Ligne vide
+Morceau de texte : ici un caractère interdit :
+Erreur lexicale : Caractère _ non autorisé
+Morceau de texte : et ici un texte
+Etoile
+Morceau de texte : synatxiquement incorrect
+Ligne vide
