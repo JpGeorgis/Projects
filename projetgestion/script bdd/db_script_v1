@@ -1,0 +1,247 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Article`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Article` (
+  `art_reference` INT NOT NULL AUTO_INCREMENT,
+  `art_designation` VARCHAR(255) NOT NULL,
+  `art_pu_ht` INT NOT NULL,
+  `art_qte_stock` INT NOT NULL,
+  `art_tx_tva` INT NULL,
+  `stockArticleAutre` INT NULL,
+  PRIMARY KEY (`art_reference`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`ArticleTaille`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`ArticleTaille` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `libelle` VARCHAR(2) NULL,
+  `taillePointure` INT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`SectionSportive`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`SectionSportive` (
+  `idSectionSportive` INT NOT NULL AUTO_INCREMENT,
+  `libelle` VARCHAR(45) NULL,
+  PRIMARY KEY (`idSectionSportive`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Niveau`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Niveau` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `libelle` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Membre`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Membre` (
+  `idMembre` INT NOT NULL AUTO_INCREMENT,
+  `nom` VARCHAR(255) NOT NULL,
+  `prenom` VARCHAR(255) NOT NULL,
+  `dateNaissance` DATETIME NOT NULL,
+  `dateInscription` DATETIME NULL,
+  `SectionSportive_idSectionSportive` INT NOT NULL,
+  `Niveau_id` INT NOT NULL,
+  PRIMARY KEY (`idMembre`, `SectionSportive_idSectionSportive`, `Niveau_id`),
+  INDEX `fk_Membre_SectionSportive1_idx` (`SectionSportive_idSectionSportive` ASC),
+  INDEX `fk_Membre_Niveau1_idx` (`Niveau_id` ASC),
+  CONSTRAINT `fk_Membre_SectionSportive1`
+    FOREIGN KEY (`SectionSportive_idSectionSportive`)
+    REFERENCES `mydb`.`SectionSportive` (`idSectionSportive`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Membre_Niveau1`
+    FOREIGN KEY (`Niveau_id`)
+    REFERENCES `mydb`.`Niveau` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`DateStock`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`DateStock` (
+  `idDateStock` INT NOT NULL AUTO_INCREMENT,
+  `dateSnapshot` DATETIME NOT NULL,
+  PRIMARY KEY (`idDateStock`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`StockArticleSection`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`StockArticleSection` (
+  `Article_art_reference` INT NOT NULL,
+  `SectionSportive_idSectionSportive` INT NOT NULL,
+  `stockRestant` VARCHAR(45) NULL,
+  `DateStock_idDateStock` INT NOT NULL,
+  PRIMARY KEY (`Article_art_reference`, `SectionSportive_idSectionSportive`, `DateStock_idDateStock`),
+  INDEX `fk_Article_has_SectionSportive_SectionSportive1_idx` (`SectionSportive_idSectionSportive` ASC),
+  INDEX `fk_Article_has_SectionSportive_Article_idx` (`Article_art_reference` ASC),
+  INDEX `fk_StockArticleSection_DateStock1_idx` (`DateStock_idDateStock` ASC),
+  CONSTRAINT `fk_Article_has_SectionSportive_Article`
+    FOREIGN KEY (`Article_art_reference`)
+    REFERENCES `mydb`.`Article` (`art_reference`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Article_has_SectionSportive_SectionSportive1`
+    FOREIGN KEY (`SectionSportive_idSectionSportive`)
+    REFERENCES `mydb`.`SectionSportive` (`idSectionSportive`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_StockArticleSection_DateStock1`
+    FOREIGN KEY (`DateStock_idDateStock`)
+    REFERENCES `mydb`.`DateStock` (`idDateStock`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`StatutCommande`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`StatutCommande` (
+  `idStatutCommande` INT NOT NULL AUTO_INCREMENT,
+  `libelle` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idStatutCommande`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Commande`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Commande` (
+  `idCommandeFourn` INT NOT NULL AUTO_INCREMENT,
+  `dateCreation` DATETIME NOT NULL,
+  `StatutCommande_idStatutCommande` INT NOT NULL,
+  `datePaiement` DATETIME NULL,
+  PRIMARY KEY (`idCommandeFourn`, `StatutCommande_idStatutCommande`),
+  INDEX `fk_Commande_StatutCommande1_idx` (`StatutCommande_idStatutCommande` ASC),
+  CONSTRAINT `fk_Commande_StatutCommande1`
+    FOREIGN KEY (`StatutCommande_idStatutCommande`)
+    REFERENCES `mydb`.`StatutCommande` (`idStatutCommande`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`LigneCommandeClient`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`LigneCommandeClient` (
+  `Membre_idMembre` INT NOT NULL,
+  `Commande_idCommandeFourn` INT NOT NULL,
+  `qteArticle` INT NOT NULL DEFAULT 1,
+  `ArticleTaille_id` INT NULL,
+  `Article_art_reference` INT NOT NULL,
+  PRIMARY KEY (`Membre_idMembre`, `Commande_idCommandeFourn`, `Article_art_reference`),
+  INDEX `fk_Membre_has_Commande_Commande1_idx` (`Commande_idCommandeFourn` ASC),
+  INDEX `fk_Membre_has_Commande_Membre1_idx` (`Membre_idMembre` ASC),
+  INDEX `fk_LigneCommandeClient_ArticleTaille1_idx` (`ArticleTaille_id` ASC),
+  INDEX `fk_LigneCommandeClient_Article1_idx` (`Article_art_reference` ASC),
+  CONSTRAINT `fk_Membre_has_Commande_Membre1`
+    FOREIGN KEY (`Membre_idMembre`)
+    REFERENCES `mydb`.`Membre` (`idMembre`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Membre_has_Commande_Commande1`
+    FOREIGN KEY (`Commande_idCommandeFourn`)
+    REFERENCES `mydb`.`Commande` (`idCommandeFourn`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_LigneCommandeClient_ArticleTaille1`
+    FOREIGN KEY (`ArticleTaille_id`)
+    REFERENCES `mydb`.`ArticleTaille` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_LigneCommandeClient_Article1`
+    FOREIGN KEY (`Article_art_reference`)
+    REFERENCES `mydb`.`Article` (`art_reference`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`Fournisseur`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`Fournisseur` (
+  `idFournisseur` INT NOT NULL AUTO_INCREMENT,
+  `raisonSoc` VARCHAR(100) NOT NULL,
+  `telephone` VARCHAR(18) NULL,
+  `adresseRue` VARCHAR(255) NULL,
+  `adresseCP` INT NULL,
+  `adresseVille` VARCHAR(45) NULL,
+  PRIMARY KEY (`idFournisseur`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`LigneCommandeFourn`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`LigneCommandeFourn` (
+  `Fournisseur_idFournisseur` INT NOT NULL,
+  `Commande_idCommandeFourn` INT NOT NULL,
+  `qteArticle` INT NOT NULL DEFAULT 1,
+  `ArticleTaille_id` INT NULL,
+  `Article_art_reference` INT NOT NULL,
+  PRIMARY KEY (`Fournisseur_idFournisseur`, `Commande_idCommandeFourn`, `Article_art_reference`),
+  INDEX `fk_Fournisseur_has_Commande_Commande1_idx` (`Commande_idCommandeFourn` ASC),
+  INDEX `fk_Fournisseur_has_Commande_Fournisseur1_idx` (`Fournisseur_idFournisseur` ASC),
+  INDEX `fk_LigneCommandeFourn_ArticleTaille1_idx` (`ArticleTaille_id` ASC),
+  INDEX `fk_LigneCommandeFourn_Article1_idx` (`Article_art_reference` ASC),
+  CONSTRAINT `fk_Fournisseur_has_Commande_Fournisseur1`
+    FOREIGN KEY (`Fournisseur_idFournisseur`)
+    REFERENCES `mydb`.`Fournisseur` (`idFournisseur`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Fournisseur_has_Commande_Commande1`
+    FOREIGN KEY (`Commande_idCommandeFourn`)
+    REFERENCES `mydb`.`Commande` (`idCommandeFourn`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_LigneCommandeFourn_ArticleTaille1`
+    FOREIGN KEY (`ArticleTaille_id`)
+    REFERENCES `mydb`.`ArticleTaille` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_LigneCommandeFourn_Article1`
+    FOREIGN KEY (`Article_art_reference`)
+    REFERENCES `mydb`.`Article` (`art_reference`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

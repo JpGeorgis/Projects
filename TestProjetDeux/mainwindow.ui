@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1148</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QQuickWidget" name="quickWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>891</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="resizeMode">
+     <enum>QQuickWidget::SizeRootObjectToView</enum>
+    </property>
+    <property name="source">
+     <url>
+      <string>qrc:/QMLMap.qml</string>
+     </url>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>10</y>
+      <width>151</width>
+      <height>327</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QCheckBox::indicator{
+	width:50px;
+	height:50px;
+}
+QCheckBox::indicator:checked{
+	image: url(&quot;../TestProjetDeux/switch_on.png&quot;);
+}
+QCheckBox::indicator:unchecked{
+	image: url(&quot;../TestProjetDeux/switch_off.png&quot;);
+}</string>
+       </property>
+       <property name="text">
+        <string>Antennes</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_2">
+       <property name="styleSheet">
+        <string notr="true">QCheckBox::indicator{
+	width:50px;
+	height:50px;
+}
+QCheckBox::indicator:checked{
+	image: url(&quot;../TestProjetDeux/switch_on.png&quot;);
+}
+QCheckBox::indicator:unchecked{
+	image: url(&quot;../TestProjetDeux/switch_off.png&quot;);
+}</string>
+       </property>
+       <property name="text">
+        <string>Fréquences</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_3">
+       <property name="styleSheet">
+        <string notr="true">QCheckBox::indicator{
+	width:50px;
+	height:50px;
+}
+QCheckBox::indicator:checked{
+	image: url(&quot;../TestProjetDeux/switch_on.png&quot;);
+}
+QCheckBox::indicator:unchecked{
+	image: url(&quot;../TestProjetDeux/switch_off.png&quot;);
+}</string>
+       </property>
+       <property name="text">
+        <string>Global</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox_4">
+       <property name="styleSheet">
+        <string notr="true">QCheckBox::indicator{
+	width:50px;
+	height:50px;
+}
+QCheckBox::indicator:checked{
+	image: url(&quot;../TestProjetDeux/switch_on.png&quot;);
+}
+QCheckBox::indicator:unchecked{
+	image: url(&quot;../TestProjetDeux/switch_off.png&quot;);
+}</string>
+       </property>
+       <property name="text">
+        <string>Graphes</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Liste des Antennes :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="listAnt"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Liste des Fréquences</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="listFreq"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1148</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGestion">
+    <property name="title">
+     <string>Gestion</string>
+    </property>
+    <addaction name="actionAjout_fr_quences"/>
+    <addaction name="actionSupprimer_fr_quences"/>
+    <addaction name="actionModifier_fr_quences"/>
+   </widget>
+   <widget class="QMenu" name="menuOption">
+    <property name="title">
+     <string>Option</string>
+    </property>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <addaction name="menuGestion"/>
+   <addaction name="menuOption"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAjout_fr_quences">
+   <property name="text">
+    <string>Ajout (Fréquences/Antennes)</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_fr_quences">
+   <property name="text">
+    <string>Supprimer (Fréquences/Antennes)</string>
+   </property>
+  </action>
+  <action name="actionModifier_fr_quences">
+   <property name="text">
+    <string>Modifier (Fréquences/Antennes)</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quitter</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QQuickWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">QtQuickWidgets/QQuickWidget</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

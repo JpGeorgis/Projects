@@ -1,0 +1,13 @@
+.title{
+
+	background-image: url("../media/a.gif");
+	background-size: contain;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	font-size: 20em;
+	text-align: center;
+}
+body{
+	background-color: black;
+}
