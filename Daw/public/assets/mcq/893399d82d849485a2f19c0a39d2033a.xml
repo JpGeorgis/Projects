@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz>
+    <name>Les grands de la littérature</name>
+    <questions>
+        <question id="1" correct_answer="0">
+            <text>On a transféré au Panthéon, en novembre 2002, les cendres de :</text>
+            <answer id="0">Alexandre Dumas</answer>
+            <answer id="1">Victor Hugo</answer>
+            <answer id="2">George Sand</answer>
+        </question>
+        <question id="2" correct_answer="0">
+            <text>Qui a écrit Madame Bovary </text>
+            <answer id="0">Gustave Flaubert</answer>
+            <answer id="1">Emile Zola</answer>
+            <answer id="2">Victor Hugo</answer>
+        </question>
+        <question id="3" correct_answer="2">
+            <text>Qu'a écrit Emile Zola </text>
+            <answer id="0">Les misérables</answer>
+            <answer id="1">Tartuffe</answer>
+            <answer id="2">L'assommoir</answer>
+        </question>
+        <question id="4" correct_answer="0">
+            <text>Qui a écrit le Discours de la méthode ? </text>
+            <answer id="0">René Descartes</answer>
+            <answer id="1">Marguerite Yourcenar</answer>
+            <answer id="2">Emmanuel Kant</answer>
+        </question>
+        <question id="5" correct_answer="1">
+            <text>Qui a écrit le Rouge et le Noir </text>
+            <answer id="0">jean Paul Sartre</answer>
+            <answer id="1">Stendhal</answer>
+            <answer id="2">Hannah Arendt</answer>
+        </question>
+    </questions>
+</quiz>

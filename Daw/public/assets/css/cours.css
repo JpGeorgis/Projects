@@ -1,0 +1,203 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+header {
+    background-color: #1E1E1E;
+    height: 10vh;
+    margin-bottom: 2.5vh
+}
+
+nav {
+    font-size: 1em;
+    height: inherit;
+    padding: 0;
+    width: inherit
+}
+
+section {
+    height: 100vh;
+    margin-bottom: 10vh;
+    z-index: 3
+}
+
+#fond {
+    background-color: #696969;
+    margin: 0;
+    position: fixed;
+    z-index: -1
+}
+
+#accueil_forum_inscription_connexion {
+    float: right;
+    margin-bottom: 1%;
+    width: 25vw
+}
+
+form {
+    display: inline
+}
+
+.login_button {
+    background-color: #1E1E1E;
+    border: none;
+    border-radius: 30px;
+    color: #E59820;
+    font-family: inherit;
+    font-size: 1em;
+    margin-right: 2.5vw;
+    margin-top: 3vh;
+    padding: 15px
+}
+
+.login_button:hover {
+    background-color: #F3F3F3;
+    cursor: pointer
+}
+
+.boutons_standards {
+    background-color: #1E1E1E;
+    border: none;
+    border-radius: 30px;
+    color: #F3F3F3;
+    font-family: inherit;
+    font-size: 1em;
+    margin-right: 2.5vw;
+    margin-top: 3vh;
+    padding: 15px
+}
+
+.boutons_standards:hover {
+    background-color: #F3F3F3;
+    color: #1E1E1E;
+    cursor: pointer
+}
+
+.texte {
+    color: #F3F3F3;
+    font-family: inherit;
+    font-size: 2em
+}
+
+.titre {
+    background-color: rgba(218, 218, 218, 0.5);
+    border-radius: 0 0 30px 0;
+    color: rgba(243, 243, 243, 1);
+    filter: drop-shadow(0px 5px 5px #1E1E1E);
+    font-size: 2em;
+    font-weight: 800;
+    margin: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    width: 30vw
+}
+
+footer {
+    background-color: #1E1E1E;
+    color: #DADADA;
+    font-size: 1em;
+    height: 10vh;
+    margin: 0
+}
+
+#mentions {
+    font-size: inherit;
+    padding: 2vh
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+    #accueil_forum_inscription_connexion {
+        margin-right: 2.5vw;
+        width: 45vw
+    }
+
+    nav,
+    footer {
+        font-size: 1em
+    }
+}
+
+@media screen and (max-width: 414px) and (max-height: 896px) {
+    #accueil_forum_inscription_connexion {
+        margin-right: 2.5vw;
+        width: 90vw
+    }
+
+    nav,
+    footer {
+        font-size: .7em
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+    #accueil_forum_inscription_connexion {
+        margin-right: 2.5vw;
+        width: 95vw
+    }
+
+    nav,
+    footer {
+        font-size: .6em
+    }
+}
+
+.carousel-items {
+    display: flex;
+    list-style-type: none;
+    overflow-x: scroll;
+    padding: .5rem 0;
+    scroll-snap-type: x mandatory
+}
+
+.carousel-item {
+    flex: 1 0 250px;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    scroll-snap-align: none
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(10, 10, 10, 0.3)
+}
+
+::-webkit-scrollbar {
+    height: 8px;
+    width: 12px
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff
+}
+
+#carousel {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 30px 0 0;
+    margin: auto;
+    width: 70vw
+}
+
+video {
+    background-color: #000;
+    height: 180px;
+    width: 320px
+}
+
+li {
+    position: relative
+}
+
+li p {
+    bottom: 2.5vh;
+    color: #F3F3F3;
+    font-family: inherit;
+    font-size: 2em;
+    left: 2.5vw;
+    position: absolute
+}
+
+#grid {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0 30px 0 0;
+    margin: 2rem auto auto;
+    padding-bottom: 2rem;
+    width: 70vw
+}

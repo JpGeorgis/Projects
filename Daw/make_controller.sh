@@ -1,0 +1,1 @@
+php scripts/make_controller.phar

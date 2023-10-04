@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz>
+    <name>Questions générales</name>
+    <questions>
+        <question id="1" correct_answer="1">
+            <text>De quoi est composée la matière ?</text>
+            <answer id="0">De chips</answer>
+            <answer id="1">D'Atomes</answer>
+            <answer id="2">Le nombre 42</answer>
+        </question>
+        <question id="2" correct_answer="0">
+            <text>Le poids s'exprime en..</text>
+            <answer id="0">N</answer>
+            <answer id="1">Kg</answer>
+            <answer id="2">L</answer>
+        </question>
+        <question id="3" correct_answer="2">
+            <text>La lune est un(e)...</text>
+            <answer id="0">Etoile</answer>
+            <answer id="1">Planète</answer>
+            <answer id="2">Satellite</answer>
+        </question>
+        <question id="4" correct_answer="0">
+            <text>Sur la Lune notre masse...</text>
+            <answer id="0">Reste la même</answer>
+            <answer id="1">Diminue</answer>
+            <answer id="2">Augmente</answer>
+        </question>
+        <question id="5" correct_answer="1">
+            <text>Sur la Lune notre poids...</text>
+            <answer id="0">Reste le même</answer>
+            <answer id="1">Diminue</answer>
+            <answer id="2">Augmente</answer>
+        </question>
+    </questions>
+</quiz>

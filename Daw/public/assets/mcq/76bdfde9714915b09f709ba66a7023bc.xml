@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz>
+    <name>Les bases de la biologie </name>
+    <questions>
+        <question id="1" correct_answer="1">
+            <text>Que désigne la flore ?</text>
+            <answer id="0">Les animaux</answer>
+            <answer id="1">Les végétaux</answer>
+            <answer id="2">Un peu de tout</answer>
+        </question>
+        <question id="2" correct_answer="0">
+            <text>Au niveau d'observation moléculaire on trouve...</text>
+            <answer id="0">L'ADN et l'ARN</answer>
+            <answer id="1">Les organes</answer>
+            <answer id="2">Les écosystèmes</answer>
+        </question>
+        <question id="3" correct_answer="2">
+            <text>Un nom important de la biologie pourrait être... </text>
+            <answer id="0">Emmanuel Macron</answer>
+            <answer id="1">François Mitterrand</answer>
+            <answer id="2">Jean-Baptiste Lamarck</answer>
+        </question>
+        <question id="4" correct_answer="0">
+            <text>La trisomie la plus courante se situe sur les chromosomes... </text>
+            <answer id="0">21</answer>
+            <answer id="1">23</answer>
+            <answer id="2">666</answer>
+        </question>
+        <question id="5" correct_answer="2">
+            <text>Combien de chromosomes contient un caryotype humain ?</text>
+            <answer id="0">21</answer>
+            <answer id="1">22</answer>
+            <answer id="2">23</answer>
+        </question>
+    </questions>
+</quiz>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!ELEMENT quiz (name|questions)*>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT questions (question)*>
+<!ELEMENT question (text|answer)*>
+<!ATTLIST question
+    correct_answer CDATA #REQUIRED
+        id CDATA #REQUIRED>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT answer (#PCDATA)>
+<!ATTLIST answer
+    id CDATA #REQUIRED>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset="utf-8">
+    <title>Cours</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Mes Cours">
+    {% include(components/theme_header.html) %}
+    
+    <link rel="stylesheet" href="{% assets(css/themecours.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+    <div id="carousel">
+        <p class="titre">Thèmes</p>
+        <ul class="carousel-items">
+            <li class="carousel-item">
+                <a href="{% route(/my/mcq/) %}">
+                    <video preload id="video0" class="videos" autoplay loop muted>
+                        <source src="{% assets(videos/evaluation.mp4) %}" type="video/mp4">
+                    </video>
+                    <p class="texte">Évaluations</p>
+                </a>
+            </li>
+            {{ subjects }}
+        </ul>
+    </div>
+
+
+    <div id="grid">
+        <p class="titre">Cours Recommandés</p>
+        {{ recommandations }}
+    </div>
+
+</section>
+
+{% include(components/footer.html) %}
+
+<script src="{% assets(js/testcanvas.js) %}"></script>
+
+
+{% include(components/theme.html) %}
+
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+</body>
+</html>

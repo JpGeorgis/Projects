@@ -1,0 +1,351 @@
+section {
+    margin-bottom: 2vh;
+    z-index: 3
+}
+
+#accueil_forum_inscription_connexion {
+    float: right;
+    margin-bottom: 1%;
+    margin-right: 5%
+}
+
+#bloc_forum {
+    border-radius: 30px;
+    margin: auto;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    width: 70vw
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 3vh
+}
+
+.vues,
+.reponses {
+    text-align: center
+}
+
+#sujetTopic {
+    height: 3vh;
+    margin: 0;
+    padding: 0;
+    width: 65vw
+}
+
+.zoneText {
+    margin: 0;
+    padding: 1vw;
+    padding-top: 0
+}
+
+#zoneText1 {
+    margin: 0;
+    padding: 1vw
+}
+
+.zoneText textarea {
+    height: 30vh;
+    margin: 0;
+    padding: 0;
+    resize: vertical
+}
+
+#bloc_tri {
+    margin-bottom: 2.5vh;
+    margin-left: 10vw;
+    padding: 0
+}
+
+#bouton_tri {
+    border: none;
+    border-radius: 30px;
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: all .5s ease-out
+}
+
+#bouton_tri:hover {
+    padding-left: 32px;
+    padding-right: 32px
+}
+
+.selection {
+    border-radius: 15px;
+    margin-right: 1vw;
+    padding: 4px;
+    text-align: center
+}
+
+@media screen and (max-width: 4440px) and (max-height: 2160px) {
+    section {
+        height: 75.5vh
+    }
+
+    #bloc_forum {
+        width: 70vw
+    }
+
+    #sujetTopic {
+        font-size: 2.5em;
+        width: 60vw
+    }
+
+    h1 {
+        font-size: 4em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 3.5em;
+        width: 60vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: 2.5em
+    }
+}
+
+@media screen and (max-width: 2560px) and (max-height: 2160px) {
+    section {
+        height: 75.5vh
+    }
+
+    #bloc_forum {
+        width: 70vw
+    }
+
+    #sujetTopic {
+        font-size: 1.5em;
+        width: 60vw
+    }
+
+    h1 {
+        font-size: 2.75em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 2.5em;
+        width: 60vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: 1.5em
+    }
+}
+
+@media screen and (max-width: 1920px) and (max-height: 2160px) {
+    section {
+        height: 75.5vh
+    }
+
+    #bloc_forum {
+        width: 70vw
+    }
+
+    #sujetTopic {
+        font-size: 1.25em;
+        width: 60vw
+    }
+
+    h1 {
+        font-size: 1.75em;
+        margin-left: 2vw
+    }
+
+    .zoneText textarea {
+        font-size: 1.75em;
+        width: 60vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: .9em
+    }
+}
+
+@media screen and (max-width: 1750px) and (max-height: 2160px) {
+    section {
+        height: 75.5vh
+    }
+
+    #bloc_forum {
+        width: 70vw
+    }
+
+    #sujetTopic {
+        font-size: 1.25em;
+        width: 60vw
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 1.75em;
+        width: 60vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: .9em
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 2160px) {
+    section {
+        height: 75.5vh
+    }
+
+    #bloc_forum {
+        width: 80vw
+    }
+
+    #sujetTopic {
+        font-size: 1em;
+        width: 70vw
+    }
+
+    h1 {
+        font-size: 1.75em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 1.5em;
+        width: 70vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: .8em
+    }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 2160px) {
+    section {
+        height: 80vh
+    }
+
+    #bloc_forum {
+        width: 80vw
+    }
+
+    #sujetTopic {
+        font-size: 1em;
+        width: 70vw
+    }
+
+    h1 {
+        font-size: 1.75em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 1.5em;
+        width: 70vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: .8em
+    }
+}
+
+@media screen and (max-width: 820px) and (max-height: 2160px) {
+    section {
+        height: 80vh
+    }
+
+    #bloc_forum {
+        width: 90vw
+    }
+
+    #sujetTopic {
+        font-size: 1em;
+        width: 80vw
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 1.25em;
+        width: 80vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: .7em
+    }
+}
+
+@media screen and (max-width: 425px) and (max-height: 2160px) {
+    section {
+        height: 80vh
+    }
+
+    #bloc_forum {
+        width: 90vw
+    }
+
+    #sujetTopic {
+        font-size: .8em;
+        width: 80vw
+    }
+
+    h1 {
+        font-size: 1.1em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 1em;
+        width: 80vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: .5em
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 2160px) {
+    section {
+        height: 80vh
+    }
+
+    #bloc_forum {
+        width: 90vw
+    }
+
+    #sujetTopic {
+        font-size: .8em;
+        width: 80vw
+    }
+
+    h1 {
+        font-size: 1em;
+        margin-left: 4vw
+    }
+
+    .zoneText textarea {
+        font-size: 1em;
+        width: 80vw
+    }
+
+    td,
+    #bouton_tri {
+        font-size: .5em
+    }
+}

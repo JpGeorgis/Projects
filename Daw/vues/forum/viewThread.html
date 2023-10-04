@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset="utf-8">
+    <title>Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Forum">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/affichetopic.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+    <div id="bloc_forum">
+        <h1>{{ threadName }}</h1>
+        
+        <table id="forumTable">
+            <tbody>
+                {{ messages }}
+            </tbody>
+        </table>
+        <div id="add_message"></div>
+        {% if(connected) %}
+            <button type="button" class="bouton_creation_message" onclick="creationMessage()">Nouveau message</button>
+        {% endif %}
+    </div>
+</section>
+{% include(components/footer.html) %}
+<script src="{% assets(js/sidenav.js) %}"></script>
+{% include(components/theme.html) %}
+<script src="{% assets(js/testcanvas.js) %}"></script>
+<script src="{% assets(js/creation_message.js) %}"></script>
+<script>
+    $(".deleteButton").click(function() {
+        if(confirm("Êtes vous sûr de vouloir supprimer ce message ?")) {
+            $.ajax( {
+                type: "POST",
+                url: "{% route(forum/delete/message/) %}",
+                data: {"message_id": this.id},
+                success: (response) => {
+                    if(response === "true")
+                        alert("Le message a été supprimé")
+                    else
+                        alert("Le message n'a pas été trouvé")
+                },
+                error: () => {
+                    alert("OOoh quelque chose s'est mal passé !")
+                },
+            })
+            this.text = "Supprimé"
+        }
+        return false
+    });
+</script>
+</body>
+</html>

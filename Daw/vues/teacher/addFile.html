@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Ajout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Accueil">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/nouveaucours.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+{% include(components/header.html) %}
+<section>
+    <div id="bloc_forum">
+        <h1>{{ className }}</h1>
+        <form action="#" method="post"  enctype="multipart/form-data">
+            <table>
+                <tbody>
+                <tr class="fil_pair">
+                    <td class="zoneText1"><label for="nomcomplet">Nom du document :</label></td>
+                </tr>
+                <tr class="fil_pair">
+                    <td class="zoneText"><input type="text" class="sujetTopic"  id="nomcomplet" name="documentName" placeholder="Précisez le nom complet ici..."></td>
+                </tr>
+                <tr class="fil_pair">
+                    <td id="zoneText3">
+                        <label for="imagecours">
+                            Document (pdf, mp4, ...)
+                        </label>
+                        <input  id="imagecours" name="document" type="file" />
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="bloc_tri">
+                <input type="submit" value="Ajout" name="submit" id="bouton_tri"/>
+            </div>
+        </form>
+    </div>
+</section>
+{% include(components/footer_canvas.html) %}
+<script src="{% assets(js/testcanvas.js) %}"></script>
+{% include(components/theme.html) %}
+<script src="{% assets(js/sidenav.js) %}"></script>
+</body>
+</html>

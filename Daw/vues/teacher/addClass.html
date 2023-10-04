@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Ajout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Accueil">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/nouveaucours.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+{% include(components/header.html) %}
+<section>
+    <div id="bloc_forum">
+        <h1>Nouveau cours</h1>
+        <form action="#" method="post"  enctype="multipart/form-data">
+            <table>
+                <tbody>
+                    <tr class="fil_pair">
+                        <td class="zoneText">
+                            <div>
+                                <label for="matiere">Catégories :</label>
+                                <select name="subject" id="matiere" class="selection">
+                                    {{ subjects }}
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="fil_pair">
+                        <td class="zoneText">
+                            <div>
+                                <label for="difficulty">Difficulté :</label>
+                                <select name="difficulty" id="difficulty" class="selection">
+                                    <option value="1">Facile</option>
+                                    <option value="2">Intermédiaire</option>
+                                    <option value="3">Avancée</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="fil_pair">
+                        <td class="zoneText1"><label for="nomcomplet">Nom du cours :</label></td>
+                    </tr>
+                    <tr class="fil_pair">
+                        <td class="zoneText"><input type="text" class="sujetTopic"  id="nomcomplet" name="subjectName" placeholder="Précisez le nom complet ici..."></td>
+                    </tr>
+                    <tr class="fil_pair">
+                        <td id="zoneText3">
+                            <label for="imagecours">
+                                Insérer l'icone du cours(Optionnel, PNG et JPG seulement) :
+                            </label>
+                            <input  id="imagecours" name="subjectImage" type="file" accept="image/png, image/jpeg">
+                        </td>
+                    </tr>
+                    <tr class="fil_pair">
+                        <td class="zoneText1"><label for="resume">Résumé du cours :</label></td>
+                    </tr>
+                    <tr class="fil_pair" >
+                        <td class="zoneText"><textarea id="resume" name="subjectResume"></textarea> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="bloc_tri">
+                <input type="submit" value="Créer" name="submit" id="bouton_tri"/>
+            </div>
+        </form>
+    </div>
+</section>
+{% include(components/footer_canvas.html) %}
+<script src="{% assets(js/testcanvas.js) %}"></script>
+{% include(components/theme.html) %}
+<script src="{% assets(js/sidenav.js) %}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Accueil">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/monCompte.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+
+    <div id="blocCompte">
+        <p class="titre">Gestion</p><br />
+        <div class="content">
+            <table class="oneOfTwoGrey">
+                {{ grid }}
+            </table>
+        </div>
+        <a href="{% route(/teacher/add/file/{{ classID }}/) %}" class="modifButton">Ajouter un fichier</a>
+    </div>
+</section>
+
+{% include(components/footer_canvas.html) %}
+<script src="{% assets(js/testcanvas.js) %}"></script>
+{% include(components/theme.html) %}
+<script src="{% assets(js/sidenav.js) %}"></script>
+<script>
+    $(".del").click(function() {
+        if(confirm("Voulez-vous vraiment supprimer ce fichier ? ")) {
+            $.ajax( {
+                type: "POST",
+                url: "{% route(teacher/delete/file/) %}",
+                data: {"id": this.id},
+                success: (response) => {
+                    if(response === "true") {
+                        alert("Fichier supprimé !")
+                        location.reload()
+                    } else {
+                        alert("Une erreur est survenue..");
+                    }
+                },
+                error: () => {
+                    alert("Une erreur est survenue..");
+                },
+            });
+        }
+        return false;
+    })
+</script>
+</body>
+</html>

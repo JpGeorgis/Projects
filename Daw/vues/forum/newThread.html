@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset="utf-8">
+    <title>Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Forum">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/newfil.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+    <div id="bloc_forum">
+        <h1>Nouveau fil de discussion</h1>
+        <div id="bloc_recherche">
+        </div>
+        <form action="#" method="post">
+            <table>
+                <tbody>
+                    <tr class="fil">
+                        <td id="zoneText1"><label>Sujet du topic :</label></td>
+                    </tr>
+                    <tr class="fil">
+                        <td class="zoneText"><input type="text" id="sujetTopic" name="title" placeholder="Précisez votre sujet ici..."></td>
+                    </tr>
+                    <tr class="fil">
+                        <td class="zoneText"><textarea name="content" placeholder="contenu..."></textarea> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="bloc_tri">
+                <input type="submit" name="submit" value="Envoyer" id="bouton_tri"/>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% include(components/footer.html) %}
+
+<script src="{% assets(js/testcanvas.js) %}"></script>
+
+{% include(components/theme.html) %}
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+</body>
+</html>

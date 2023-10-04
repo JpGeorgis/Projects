@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Mon compte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Accueil">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/monCompte.css) %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+{% include(components/header.html) %}
+
+<section>
+    <div id="blocCompte">
+        <p class="titre">Mes Informations</p>
+        <table class="oneOfTwoGrey" aria-label="table">
+            <tr class="row">
+                <td class="texte">Nom :</td>
+                <td class="text2">{{ lastname }}</td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td class="texte">Prénom :</td>
+                <td class="text2">{{ firstname }}</td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td class="texte">Email :</td>
+                <td class="text2" id="email">{{ email }}</td>
+                <td><a href="#" class="modifButton" id="edit_email">Modifier</a></td>
+            </tr>
+            <tr id="edit_email_block" style="display: none;" class="spoiler">
+                <td class="texte" colspan="2">Votre nouvelle email: <input class="boxreponses" type="email" minlength="6" maxlength="90" name="new_email" id="new_email"/></td>
+                <td><a href="#" class="modifButton" id="valid_edit_email">Valider</a></td>
+            </tr>
+            <tr class="row">
+                <td class="texte">Telephone :</td>
+                <td class="text2">{{ phone }}</td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td class="texte">Pseudo :</td>
+                <td class="text2">{{ login }}</td>
+                <td><a href="#" class="modifButton" id="edit_login">Modifier</a></td>
+            </tr>
+            <tr id="edit_login_block" style="display: none;" class="spoiler">
+                <td class="texte" colspan="2">Nouvel identifiant: <input class="boxreponses" type="text" minlength="6" maxlength="90" name="new_login" id="new_login"/></td>
+                <td><a href="#" class="modifButton" id="valid_edit_login">Valider</a></td>
+            </tr>
+            <tr class="row">
+                <td class="texte">Date de naissance :</td>
+                <td class="text2">{{ born }}</td>
+                <td></td>
+            </tr>
+            <tr class="row">
+                <td class="texte">Mot de passe :</td>
+                <td class="text2">***********</td>
+                <td><a href="#" class="modifButton" id="edit_password">Modifier</a></td>
+            </tr>
+            <tr id="edit_password_block" style="display: none;" class="spoiler">
+                <td class="texte" colspan="2">Ancien mot de passe: <input class="boxreponses" type="password" minlength="6" maxlength="90" name="old_password" id="old_password"/></td>
+                <td></td>
+            </tr>
+            <tr id="edit_password_block1" style="display: none;" class="spoiler">
+                <td class="texte" colspan="2">Nouveau : <input class="boxreponses" type="password" minlength="6" maxlength="90" name="new_login" id="new_password"/></td>
+                <td></td>
+            </tr>
+            <tr id="edit_password_block2" style="display: none;" class="spoiler">
+                <td class="texte" colspan="2">Confirmation : <input class="boxreponses" type="password" minlength="6" maxlength="90" name="new_confirm" id="new_confirm"/></td>
+                <td><a href="#" class="modifButton" id="valid_edit_password">Valider</a></td>
+            </tr>
+            <tr class="row">
+                <td colspan="3" id="vide"><p class="texte3"> </p></td>
+            </tr>
+            <tr class="row">
+                <td class="texte">Supprimer mon compte :</td>
+                <td></td>
+                <td>
+                    <a href="#" style="" id="delete-button" class="suppButton">Supprimer</a>
+                    <a href="#" style="display: none" id="confirm-delete" class="suppButton">Confirmer ?</a>
+                    <a href="#" style="display: none" id="confirm-bis-delete" class="suppButton">Confirmer ??</a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</section>
+
+{% include(components/footer_canvas.html) %}
+
+<script src="{% assets(js/testcanvas.js) %}"></script>
+
+{% include(components/theme.html) %}
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+
+<script>
+    // TODO: les messages d'erreurs
+    // Email block
+    $("#edit_email").click(() => {
+        $("#edit_email_block").toggle()
+    })
+    $("#valid_edit_email").click(() => {
+        const email = $("#new_email").val()
+        if(email.length < 5 || email.length > 30) {
+            alert("Format d'email invalide.");
+            return false;
+        }
+        $.ajax( {
+            type: "POST",
+            url: "{% route(change/email/) %}",
+            data: {"email": email},
+            success: (response) => {
+                if(response === "true") {
+                    alert("Adresse changée avec succès.")
+                    location.reload()
+                }
+                else if(response === "exists") {
+                    alert("Cette adresse existe déjà.")
+                        return false;
+                } else if(response === "not_good") {
+                    alert("L'adresse semble incorrecte.")
+                    return false;
+                }else {
+                    alert("Une erreur est survenue.")
+                    return false;
+                }
+            },
+            error: (response) => {
+                alert(response)
+            },
+        });
+
+        $("#edit_email_block").css("display", "none")
+
+        return false;
+    })
+
+    // Login block
+    $("#edit_login").click(() => {
+        $("#edit_login_block").toggle()
+    })
+    $("#valid_edit_login").click(() => {
+        const login = $("#new_login").val()
+        console.log(login)
+        if(login.length < 5 || login.length > 30) {
+            alert("Format d'identifiant invalide.");
+            return false;
+        }
+        $.ajax( {
+            type: "POST",
+            url: "{% route(change/login/) %}",
+            data: {"login": login},
+            success: (response) => {
+                if(response === "true") {
+                    alert("Pseudo changé avec succès.")
+                    location.reload()
+                }
+                else if(response === "exists") {
+                    alert("Cet identifiant existe déjà.")
+                    return false;
+                }else if(response === "not_good") {
+                    alert("Le mot de passe ne respecte pas la politique de sécurité.")
+                    return false;
+                } else {
+                    alert("Erreur inconnu")
+                    return false;
+                }
+            },
+            error: (response) => {
+                alert(response)
+            },
+        });
+        return false;
+    })
+
+    // Password block :
+    $("#edit_password").click(() => {
+        $("#edit_password_block").toggle()
+        $("#edit_password_block1").toggle()
+        $("#edit_password_block2").toggle()
+    })
+    $("#valid_edit_password").click(() => {
+        const oldPassword = $("#old_password").val()
+        const newPassword = $("#new_password").val()
+        const confirmPassword = $("#new_confirm").val()
+
+        if(newPassword !== confirmPassword) {
+            alert("Les mots de passe ne correspondent pas")
+            return false;
+        }
+        $.ajax( {
+            type: "POST",
+            url: "{% route(change/password/) %}",
+            data: {
+                "password": newPassword,
+                "old_password": oldPassword
+            },
+            success: (response) => {
+                if(response === "true") {
+                    alert("Mot de passe changé avec succès.")
+                    location.reload()
+                } else if(response === "bad_old") {
+                    alert("Ancien mot de passe incorrecte.")
+                    return false
+                } else if(response === "not_good") {
+                    alert("le mot de passe ne respecte pas notre politique de sécurité.")
+                } else {
+                    alert("Une erreur est survenue. L'ancien de mot de passe n'est peut-être pas le bon.")
+                    return false;
+                }
+            },
+            error: (response) => {
+                alert(response)
+            },
+        });
+        return false;
+    })
+
+    // Delete button
+    $("#delete-button").click(() => {
+        $("#confirm-delete").css("display", "")
+        $("#delete-button").css("display", "none")
+    })
+    $("#confirm-delete").click(() => {
+        $("#confirm-delete").css("display", "none")
+        $("#confirm-bis-delete").css("display", "")
+    })
+    $("#confirm-bis-delete").click(() =>{
+        window.location.href = "{% route(delete/account/) %}"
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Création</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="add,account">
+    <meta name="robots" content="login/signin">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/nouveaucompte.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+    <div id="bloc">
+        <p class="texte">{{ errors }}</p>
+        <p class="titre">Création</p>
+        <p class="texte"></p>
+        <form method="POST" action="{% route(/admin/account/add/) %}">
+            <table class="tableau">
+                <tr>
+                    <td class="tdLeft"><label class="texte" for="lastname">Nom :</label></td>
+                    <td class="tdRight"><label class="texte" for="firstname">Prénom :</label></td>
+                </tr>
+                <tr>
+                    <td class="tdLeft"><input class="boxreponses" id="lastname" name="lastname" type="text" placeholder="Nom..." required></td>
+                    <td class="tdRight"><input value="{{ account_firstname }}"  class="boxreponses" id="firstname" name="firstname" type="text" placeholder="Prénom..." required></td>
+                </tr>
+                <tr>
+                    <td class="tdLeft"><label class="texte" for="mail">Adresse e-mail :</label></td>
+                    <td class="tdRight"><label class="texte" for="phone">Téléphone :</label></td>
+                </tr>
+                <tr>
+                    <td class="tdLeft"><input class="boxreponses" id="mail" name="mail" type="email" placeholder="xyz@abcd.def" required></td>
+                    <td class="tdRight"><input class="boxreponses" id="phone" name="phone" type="tel" placeholder="+33 1 23 45 67 89" required></td>
+                </tr>
+                <tr>
+                    <td class="tdLeft"><label class="texte" for="login">Nom d'utilisateur :</label></td>
+                    <td class="tdRight"><label class="texte" for="password">Mot de Passe :</label></td>
+                </tr>
+                <tr>
+                    <td class="tdLeft"><input class="boxreponses" name="login" id="login" type="text"  placeholder="Majuscule + mini 4 lettres, tirets, espaces, apostrophes" autocomplete="username" required></td>
+                    <td class="tdRight"><input class="boxreponses" name="password" id="password" type="password" autocomplete="new-password" placeholder="8 caractères mini (un chiffre, une miniscule, une majuscule)"></td>
+                </tr>
+                <tr>
+                    <td class="tdLeft"><label class="texte" for="register_born">Date de Naissance :</label></td>
+                    <td class="tdRight"><label class="texte" for="rank">Rang :</label></td>
+                </tr>
+                <tr>
+                    <td class="tdLeft"><input class="boxreponses" id="register_born" name="born" type="date"
+                                              min="1920-01-01" required></td>
+                    <td class="tdRight"><input class="boxreponses" name="rank" id="rank"
+                                               type="number"  placeholder="0" required></td>
+                </tr>
+            </table>
+            <input id="submitInscription" type="submit" name="submit" value="Modifier">
+        </form>
+    </div>
+</section>
+
+{% include(components/footer.html) %}
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+
+
+{% include(components/theme.html) %}
+
+
+<script src="{% assets(js/testcanvas.js) %}"></script>
+</body>
+</html>

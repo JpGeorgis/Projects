@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="login,signin">
+    <meta name="robots" content="login/signin">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/login.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+    <div id="bloc">
+        <div class="flex">
+            {{ errors_register }}
+            <p class="titre">S'inscrire</p>
+            <p class="texte">Merci de nous rejoindre ! C'est à portée d'un seul clic !</p>
+            <form method="POST" action="{% route(/login/action/) %}">
+                 <table class="tableau">
+                     <tr>
+                        <td class="tdLeft"><label class="texte" for="register_lastname">Nom :</label></td>
+                        <td class="tdRight"><label class="texte" for="register_firstname">Prénom :</label></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLeft"><input class="boxreponses" id="register_lastname" name="lastname" type="text"
+                                                  placeholder="Majuscule + mini 4 lettres, tirets, espaces, apostrophes"
+                                                  required></td>
+                        <td class="tdRight"><input class="boxreponses" id="register_firstname" name="firstname" type="text"
+                                                   placeholder="Majuscule + mini 4 lettres, tirets, espaces, apostrophes"
+                                                   required></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLeft"><label class="texte" for="register_mail">Adresse e-mail :</label></td>
+                        <td class="tdRight"><label class="texte" for="register_phone">Téléphone :</label></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLeft"><input class="boxreponses" id="register_mail" name="mail" type="email"
+                                                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+                                                  placeholder="xyz@abcd.def" required></td>
+                        <td class="tdRight"><input  class="boxreponses" id="register_phone" name="phone" type="tel"
+                                                    pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
+                                                    placeholder="+33 1 23 45 67 89" required></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLeft"><label class="texte" for="register_login">Nom d'utilisateur :</label></td>
+                        <td class="tdRight"><label class="texte" for="register_born">Date de Naissance :</label></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLeft"><input class="boxreponses" id="register_login" name="login" type="text"
+                                                  autocomplete="username"
+                                                  placeholder="Majuscule + mini 4 lettres, tirets, espaces, apostrophes" required></td>
+                        <td class="tdRight"><input class="boxreponses" id="register_born" name="born" type="date"
+                                                   min="1920-01-01" max="2006-01-01" required></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLeft"><label class="texte" for="register_password">Mot de Passe :</label></td>
+                        <td class="tdRight"><label class="texte" for="register_confirm">Confirmation Mot de Passe :</label></td>
+                    </tr>
+                    <tr>
+                        <td class="tdLeft"><input class="boxreponses" id="register_password" name="password" type="password"
+                                                  autocomplete="new-password" minlength="8"
+                                                  placeholder="8 caractères mini (un chiffre, une miniscule, une majuscule)" required></td>
+                        <td class="tdRight"><input class="boxreponses" id="register_confirm" name="confirm" type="password"
+                                                   autocomplete="new-password"
+                                                   minlength="8"
+                                                   placeholder="8 caractères mini (un chiffre, une miniscule, une majuscule)" required></td>
+                    </tr>
+                </table>
+                <input id="submitInscription" name="submitRegister" type="submit" value="S'inscrire">
+                <p class="texte2">En créant un compte, vous acceptez nos Conditions d'utilisation & notre Politique de confidentialité,
+                    <br /> et confirmez être âgé d'au moins 16 ans.</p>
+            </form>
+        </div>
+        <div class="flex">
+            <p id="vertical"></p>
+        </div>
+        <div class="flex">
+            {{ errors_login }}
+            <p class="titre">Se Connecter</p>
+            <p class="texte">Vous avez déjà un compte ? Connectez-vous ci-dessous.</p>
+            <form method="POST" action="{% route(/login/action/) %}">
+                 <table class="tableau" id="bloc_connexion">
+                     <tr>
+                        <td><label class="texte" for="login_login">Adresse e-mail ou Nom d'utilisateur :</label></td>
+                    </tr>
+                     <tr>
+                        <td><input class="boxreponses" id="login_login" name="login" autocomplete="username" type="text" required></td>
+                    </tr>
+                    <tr>
+                        <td><label class="texte" for="login_password">Mot de Passe :</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="boxreponses" id="login_password" name="password" type="password" autocomplete="current-password" required></td>
+                    </tr>
+                </table>
+
+                <input id="submitConnexion" name="submitLogin" type="submit" value="Se connecter">
+                <p class="texte2">Problème de connexion ? Assurez-vous que les cookies de votre navigateur et Javascript soient activés.</p>
+            </form>
+        </div>       
+    </div>
+</section>
+
+{% include(components/footer_canvas.html) %}
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+<script src="{% assets(js/testcanvas.js) %}"></script>
+
+{% include(components/theme.html) %}
+
+</body>
+</html>

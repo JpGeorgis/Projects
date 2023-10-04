@@ -1,0 +1,411 @@
+section {
+    height: 75vh;
+    margin-bottom: 2.5vh;
+    z-index: 3
+}
+
+#submitInscription {
+    border-radius: 30px;
+    margin-bottom: 1.5vh;
+    margin-top: 3vh;
+    transition: .5s;
+    width: 10vw
+}
+
+#bloc {
+    border-radius: 30px;
+    padding: 1vw
+}
+
+.flex {
+    padding: auto
+}
+
+.tableau {
+    padding-left: 18%;
+    padding-top: 1vh;
+    width: 95%
+}
+
+.tableau td {
+    padding-bottom: .5vh
+}
+
+.tableauC {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1vh
+}
+
+.titre {
+    border-radius: 0 0 30px 0;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 30vw
+}
+
+.tdLeft {
+    padding-right: 2.5%
+}
+
+.tdRight {
+    padding-left: 2.5%
+}
+
+.texte {
+    font-style: italic;
+    padding-top: 1vh
+}
+
+.texte2 {
+    text-align: center
+}
+
+.boxreponses {
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 8px 0;
+    width: 16vw
+}
+
+input:invalid {
+    border: 2px solid red
+}
+
+@media screen and (max-width: 4400px) and (max-height: 2160px) {
+    #vertical {
+        border-left: 6px solid #F3F3F3;
+        height: 67.5vh
+    }
+
+    #bloc {
+        height: 70vh;
+        margin-left: 15vw;
+        width: 70vw
+    }
+
+    #submitInscription {
+        border-radius: 30px;
+        font-size: 2.5em;
+        margin-left: 34.5vw;
+        padding: 12px
+    }
+
+    .boxreponses {
+        font-size: 2em;
+        padding: 20px 30px
+    }
+
+    .texte {
+        font-size: 2.5em
+    }
+
+    .texte2 {
+        font-size: 2em
+    }
+
+    .titre {
+        font-size: 4em
+    }
+}
+
+@media screen and (max-width: 2560px) and (max-height: 2160px) {
+    #vertical {
+        border-left: 4px solid #F3F3F3;
+        height: 67.5vh
+    }
+
+    #bloc {
+        height: 70vh;
+        margin-left: 15vw;
+        width: 70vw
+    }
+
+    #submitInscription {
+        border-radius: 30px;
+        font-size: 1.5em;
+        margin-left: 32.5vw;
+        padding: 20px
+    }
+
+    .boxreponses {
+        font-size: 1.5em;
+        padding: 12px 20px
+    }
+
+    .texte {
+        font-size: 1.5em
+    }
+
+    .texte2 {
+        font-size: 1.25em;
+        margin-top: 1.5vw
+    }
+
+    .titre {
+        font-size: 2.75em
+    }
+}
+
+@media screen and (max-width: 1920px) and (max-height: 2160px) {
+    #vertical {
+        border-left: 2px solid #F3F3F3;
+        height: 67.5vh
+    }
+
+    #bloc {
+        height: 70vh;
+        margin-left: 15vw;
+        width: 70vw
+    }
+
+    #submitInscription {
+        border-radius: 30px;
+        font-size: .9em;
+        margin-left: 32.5vw;
+        padding: 15px
+    }
+
+    .boxreponses {
+        font-size: 1em;
+        padding: 12px 20px
+    }
+
+    .texte {
+        font-size: .9em
+    }
+
+    .texte2 {
+        font-size: .8em
+    }
+
+    .titre {
+        font-size: 2em
+    }
+}
+
+@media screen and (max-width: 1750px) and (max-height: 2160px) {
+    #vertical {
+        border-left: 2px solid #F3F3F3;
+        height: 67.5vh
+    }
+
+    #bloc {
+        height: 70vh;
+        margin-left: 15vw;
+        width: 70vw
+    }
+
+    #submitInscription {
+        border-radius: 30px;
+        font-size: .9em;
+        margin-left: 34.5vw;
+        padding: 10px
+    }
+
+    .boxreponses {
+        font-size: 1em;
+        padding: 6px 10px
+    }
+
+    .texte {
+        font-size: .9em
+    }
+
+    .texte2 {
+        font-size: .8em
+    }
+
+    .titre {
+        font-size: 2em
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 2160px) {
+    #vertical {
+        border-left: 2px solid #F3F3F3;
+        height: 67.5vh
+    }
+
+    #bloc {
+        height: 70vh;
+        margin-left: 10vw;
+        width: 80vw
+    }
+
+    .boxreponses {
+        font-size: 1em;
+        padding: 6px 10px
+    }
+
+    .texte {
+        font-size: .8em
+    }
+
+    .texte2 {
+        font-size: .7em
+    }
+
+    .titre {
+        font-size: 1.75em
+    }
+
+    #submitConnexion,
+    #submitInscription {
+        font-size: .8em;
+        margin-left: 12.5vw;
+        padding: 10px
+    }
+}
+
+@media screen and (max-width: 820px) and (max-height: 2160px) {
+    section {
+        height: 100vh;
+    }
+
+    #vertical {
+        border-left: 2px solid #F3F3F3;
+        border-left: 2px solid #F3F3F3;
+        height: 67.5vh
+    }
+
+    #bloc {
+        height: 70vh;
+        margin-left: 10vw;
+        width: 90vw
+    }
+
+    .boxreponses {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+
+    .texte {
+        font-size: .7em;
+    }
+
+    .texte2 {
+        font-size: .6em
+    }
+
+    .titre {
+        font-size: 1.5em
+    }
+
+    td {
+        width: 40vw
+    }
+
+    #submitConnexion,
+    #submitInscription {
+        font-size: .7em;
+        margin-left: 12.5vw;
+        padding: 10px
+    }
+}
+
+@media screen and (max-width: 425px) and (max-height: 2160px) {
+    section {
+        height: 100vh
+    }
+
+    #vertical {
+        height: 0
+    }
+
+    #bloc {
+        border-radius: 8px;
+        flex-direction: column;
+        height: 70vh;
+        margin-left: 10vw;
+        width: 90vw
+    }
+
+    #submitInscription {
+        border-radius: 10px;
+        font-size: .5em;
+        margin-left: 30vw;
+        padding: 5px;
+        width: 20vw
+    }
+
+    #bloc_connexion {
+        margin-left: 20vw
+    }
+
+    .boxreponses {
+        font-size: .5em;
+        padding: 6px 10px;
+        width: 35vw
+    }
+
+    .texte {
+        font-size: .5em
+    }
+
+    .texte2 {
+        font-size: .4em
+    }
+
+    .titre {
+        font-size: 1.1em
+    }
+
+    td {
+        width: 40vw
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 2160px) {
+    section {
+        height: 60vh
+    }
+
+    #vertical {
+        height: 0
+    }
+
+    #bloc {
+        border-radius: 5px;
+        flex-direction: column;
+        height: inherit;
+        margin-left: 5vw;
+        width: 90vw
+    }
+
+    #submitInscription {
+        border-radius: 10px;
+        font-size: .5em;
+        margin-left: 30vw;
+        padding: 5px;
+        width: 20vw
+    }
+
+    #bloc_connexion {
+        margin-left: 20vw
+    }
+
+    .boxreponses {
+        font-size: .4em;
+        padding: 6px 10px;
+        width: 35vw
+    }
+
+    .texte {
+        font-size: .5em
+    }
+
+    .texte2 {
+        font-size: .4em
+    }
+
+    .titre {
+        font-size: 1em
+    }
+
+    td {
+        width: 40vw
+    }
+}

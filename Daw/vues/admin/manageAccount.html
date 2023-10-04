@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,accueil">
+  <meta name="Description" content="Accueil">
+  {% include(components/theme_header.html) %}
+  <link rel="stylesheet" href="{% assets(css/monCompte.css) %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+
+  <div id="blocCompte">
+    <p class="titre">Gestion</p>
+    <table class="oneOfTwoGrey">
+      {{ accounts }}
+    </table>
+    <a href="{% route(/admin/account/add/) %}" class="modifButton">Ajouter</a>
+  </div>
+</section>
+
+{% include(components/footer_canvas.html) %}
+
+<script src="{% assets(js/testcanvas.js) %}"></script>
+
+{% include(components/theme.html) %}
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+
+</body>
+</html>

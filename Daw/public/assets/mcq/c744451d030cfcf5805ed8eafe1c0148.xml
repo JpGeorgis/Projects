@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz>
+    <name>la chimie pour tous</name>
+    <questions>
+        <question id="1" correct_answer="1">
+            <text>Les éléments sont regroupés dans... </text>
+            <answer id="0">Une petite boite</answer>
+            <answer id="1">Le tableau périodique des éléments</answer>
+            <answer id="2">L'armoire qui mène à Narnia</answer>
+        </question>
+        <question id="2" correct_answer="0">
+            <text>Que font les métaux alcalins au contact de l'eau ?</text>
+            <answer id="0">Ils s'enflamment</answer>
+            <answer id="1">Ils changent de couleur</answer>
+            <answer id="2">Rien de particulier</answer>
+        </question>
+        <question id="3" correct_answer="2">
+            <text>L'élement chimique de numéro atomique 1 est: </text>
+            <answer id="0">Fer</answer>
+            <answer id="1">Francium</answer>
+            <answer id="2">Hydrogène</answer>
+        </question>
+        <question id="4" correct_answer="0">
+            <text>Un atome ayant perdu un électron devient </text>
+            <answer id="0">Un ion</answer>
+            <answer id="1">Un demi atome</answer>
+            <answer id="2">Obligatoirement radioactif</answer>
+        </question>
+        <question id="5" correct_answer="1">
+            <text>Une solution avec un pH de 8 est...</text>
+            <answer id="0">Neutre</answer>
+            <answer id="1">Basique</answer>
+            <answer id="2">Acide</answer>
+        </question>
+    </questions>
+</quiz>

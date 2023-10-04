@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Ajout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,accueil">
+  <meta name="Description" content="Accueil">
+  {% include(components/theme_header.html) %}
+  <link rel="stylesheet" href="{% assets(css/nouveaucours.css) %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+{% include(components/header.html) %}
+<section>
+  <div id="bloc_forum">
+    <h1>Nouveau QCM</h1>
+    <form action="#" method="post"  enctype="multipart/form-data">
+      <table>
+        <tbody>
+        <tr class="fil_pair">
+          <td class="zoneText">
+            <div>
+              <label for="matiere">Catégories :</label>
+              <select name="subject" id="matiere" class="selection">
+                {{ subjects }}
+              </select>
+            </div>
+          </td>
+        </tr>
+        <tr class="fil_pair">
+          <td id="zoneText3">
+            <label for="imagecours">
+              QCM (obligatoire) :
+            </label>
+            <input  id="imagecours" name="xml" type="file" accept="text/xml">
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <div id="bloc_tri">
+        <input type="submit" value="Créer" name="submit" id="bouton_tri"/>
+      </div>
+    </form>
+    <div style="padding-left: 10em;">
+    <p style="color:white;">Le XML doit être sous cette forme :</p>
+    <textarea rows="20" cols="80" style="border:none;">
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz>
+    <name>Questions générales</name>
+    <questions>
+        <question id="1" correct_answer="1">
+            <text>De quoi est composée la matière ?</text>
+            <answer id="0">De chips</answer>
+            <answer id="1">D'Atomes</answer>
+            <answer id="2">Le nombre 42</answer>
+        </question>
+        <question id="2" correct_answer="0">
+            <text>Le poids s'exprime en..</text>
+            <answer id="0">N</answer>
+            <answer id="1">Kg</answer>
+            <answer id="2">L</answer>
+        </question>
+        <question id="3" correct_answer="2">
+            <text>La lune est un(e)...</text>
+            <answer id="0">Etoile</answer>
+            <answer id="1">Planète</answer>
+            <answer id="2">Satellite</answer>
+        </question>
+        <question id="4" correct_answer="0">
+            <text>Sur la Lune notre masse...</text>
+            <answer id="0">Reste la même</answer>
+            <answer id="1">Diminue</answer>
+            <answer id="2">Augmente</answer>
+        </question>
+        <question id="5" correct_answer="1">
+            <text>Sur la Lune notre poids...</text>
+            <answer id="0">Reste le même</answer>
+            <answer id="1">Diminue</answer>
+            <answer id="2">Augmente</answer>
+        </question>
+    </questions>
+</quiz>
+</textarea>
+    </div>
+  </div>
+</section>
+{% include(components/footer_canvas.html) %}
+<script src="{% assets(js/testcanvas.js) %}"></script>
+{% include(components/theme.html) %}
+<script src="{% assets(js/sidenav.js) %}"></script>
+</body>
+</html>

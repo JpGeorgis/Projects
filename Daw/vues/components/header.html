@@ -1,0 +1,55 @@
+<div id="sidenav">
+    <span id="btn" onclick="listeNav()"><em class="fas fa-bars"></em> </span>
+</div>
+<header>
+    <nav aria-label="Site menu">
+        <div id="accueil_forum_inscription_connexion">
+            <a href="{% route(/index) %}" class="boutons_standards">Accueil</a>
+            {% if(isAdmin) %}
+                <a href="{% route(/admin/account) %}" class="boutons_standards">Gestion comptes</a>
+            {% endif %}
+
+            {% if(isTeacher) %}
+                <a href="{% route(/teacher/) %}" class="boutons_standards">Gestion cours</a>
+            {% endif %}
+
+            <a href="{% route(/forum) %}" class="boutons_standards">Forum</a>
+
+            {% if(connected) %}
+                <a href="{% route(/my/classes/) %}" class="boutons_standards">Mes cours</a>
+                <a href="{% route(/my/account/) %}" class="boutons_standards">Mon compte</a>
+                <a href="{% route(/logout) %}" class="login_button">Déconnexion</a>
+            {% else %}
+                <a href="{% route(/login) %}" class="login_button">Connexion</a>
+            {% endif %}
+        </div>
+    </nav>
+
+
+
+    <nav id="mySidenav" class="sidenav">
+        <div class="menu">
+            <a href="{% route(/index) %}" class="boutons_standardsMenu">Accueil</a>
+
+            {% if(isAdmin) %}
+                <a href="{% route(/index) %}" class="boutons_standardsMenu">Accueil Admin</a>
+            {% endif %}
+
+            {% if(isTeacher) %}
+                <a href="{% route(/nouveaucours) %}" class="boutons_standardsMenu">Gestion cours</a>
+            {% endif %}
+
+            <a href="{% route(/forum) %}" class="boutons_standardsMenu">Forum</a>
+
+            {% if(connected) %}
+                <a href="{% route(/my/classes) %}" class="boutons_standardsMenu">Mes cours</a>
+                <a href="{% route(/my/account) %}" class="boutons_standardsMenu">Mon compte</a>
+                <a href="{% route(/logout) %}" class="boutons_standardsMenu">Déconnexion</a>
+            {% else %}
+                <a href="{% route(/login) %}" class="boutons_standardsMenu">Connexion</a>
+            {% endif %}
+        </div>
+
+    </nav>
+
+</header>

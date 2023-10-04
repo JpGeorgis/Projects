@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+    <meta charset="utf-8">
+    <title>Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,accueil">
+    <meta name="Description" content="Forum">
+    {% include(components/theme_header.html) %}
+    <link rel="stylesheet" href="{% assets(css/forum.css) %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+    <div id="bloc_forum">
+        <h1>Forum</h1>
+        <div>
+            <a href="{% route(/new/thread/) %}" class="bouton_creation_fil inline">Nouveau fil de discussion +</a>
+            <form action="#" method="post">
+                <span id="recherche">
+                    <img src="{% assets(images/logo_loupe.png) %}" alt="logo loupe" id="logo_loupe">
+                    <input id="zone_recherche" name="recherche" placeholder="Rechercher un fil de discussion"/>
+                </span>
+            </form>
+        </div>
+        <table id="forumTable">
+            <thead>
+                <tr>
+                    <td id="topic" colspan="2">Fils de discussion</td>
+                    <td id="reponse">Réponses</td>
+                    <td id="vue">Vues</td>
+                    <td id="dernier_message">Dernier message</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{ globalViewThreads }}
+            </tbody>
+        </table>
+        <a href="{% route(/new/thread/) %}" class="bouton_creation_fil inline">Nouveau fil de discussion +</a>
+    </div>
+</section>
+
+{% include(components/footer.html) %}
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+<script src="{% assets(js/testcanvas.js) %}"></script>
+<script>
+    $(".deleteButton").click(function() {
+        if(confirm("Voulez-vous vraiment supprimer ce poste ?")) {
+            $.ajax( {
+                type: "POST",
+                url: "{% route(forum/delete/thread/) %}",
+                data: {"thread_id": this.id},
+                success: (response) => {
+                    if(response === "true")
+                        alert("Le fil a été supprimé")
+                    else
+                        alert("Le fil n'a pas été trouvé")
+                },
+                error: () => {
+                    alert("OOoh quelque chose s'est mal passé !")
+                },
+            })
+            this.text = "Supprimé"
+        }
+        return false
+    })
+
+    const posts = $(".fil");
+
+    function getName(item) {
+        return $(item).find(".postTitle").text()
+    }
+
+    $("#zone_recherche").on("input", function() {
+        const searched = this
+        $(".fil").each(function() {
+            if(!getName(this).includes(searched.value))
+                $(this).css("display", "none")
+            else
+                $(this).css("display", "")
+        })
+    })
+</script>
+
+{% include(components/theme.html) %}
+
+
+
+</body>
+</html>

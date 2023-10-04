@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Gestion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,accueil">
+  <meta name="Description" content="Accueil">
+  {% include(components/theme_header.html) %}
+  <link rel="stylesheet" href="{% assets(css/monCompte.css) %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+</head>
+<body onload="chargementTheme()">
+<canvas id="fond"></canvas>
+
+{% include(components/header.html) %}
+
+<section>
+
+  <div id="blocCompte">
+    <p class="titre">Gestion</p>
+    <table class="oneOfTwoGrey">
+      {{ grid }}
+    </table>
+    <table class="invisible">
+      <tr>
+        <td class="invisible"><a href="{% route(/teacher/add/class/) %}" class="modifButton">Ajouter cours</a> </td>
+        <td class="invisible"><a href="{% route(/teacher/view/mcq/) %}" class="modifButton">Voir QCM</a></td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+{% include(components/footer_canvas.html) %}
+
+<script src="{% assets(js/testcanvas.js) %}"></script>
+
+{% include(components/theme.html) %}
+
+<script src="{% assets(js/sidenav.js) %}"></script>
+
+</body>
+</html>

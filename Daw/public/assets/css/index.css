@@ -1,0 +1,300 @@
+section {
+    height: 75vh;
+    margin-bottom: 2.5vh;
+    z-index: 3
+}
+
+#conteneur_video {
+    background-size: cover;
+    height: inherit
+}
+
+.videos {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1
+}
+
+#presentation {
+    margin-left: 5%;
+    position: relative;
+    transition: all 1s ease-out
+}
+
+#theme {
+    border-radius: 0 0 30px 0;
+    margin: 0;
+    text-align: center;
+    width: 30vw
+}
+
+#fleche_gauche {
+    display: none;
+    float: left;
+    height: 5vh;
+    margin-left: 5vw;
+    margin-top: inherit;
+    width: 5vh
+}
+
+#fleche_droite {
+    display: none;
+    float: right;
+    height: 5vh;
+    margin-right: 5vw;
+    margin-top: inherit;
+    width: 5vh
+}
+
+#fleches {
+    position: relative
+}
+
+#partie_gauche {
+    display: none;
+    height: inherit;
+    position: fixed;
+    width: 15vw
+}
+
+#bloc_gauche {
+    height: inherit;
+    position: fixed;
+    width: 15vw;
+    z-index: 3
+}
+
+#bloc_central {
+    height: inherit;
+    margin-left: 15vw;
+    position: fixed;
+    width: 70vw
+}
+
+#partie_droite {
+    display: none;
+    height: inherit;
+    margin-left: 85vw;
+    position: fixed;
+    width: 15vw
+}
+
+#bloc_droit {
+    height: inherit;
+    margin-left: 85vw;
+    position: fixed;
+    width: 15vw;
+    z-index: 3
+}
+
+#video1,
+#video2,
+#video3,
+#video4,
+#video5 {
+    display: none
+}
+
+@media screen and (max-width: 4400px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 5em;
+        margin-top: 50vh
+    }
+
+    #theme {
+        font-size: 3.75em;
+        padding-bottom: 30px;
+        padding-top: 30px
+    }
+
+    #fleches {
+        margin-top: 25vh
+    }
+}
+
+@media screen and (max-width: 2560px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 3.75em;
+        margin-top: 55vh
+    }
+
+    #theme {
+        font-size: 2.5em;
+        padding-bottom: 20px;
+        padding-top: 20px
+    }
+
+    #fleches {
+        margin-top: 25vh
+    }
+}
+
+@media screen and (max-width: 1920px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 3em;
+        margin-top: 55vh
+    }
+
+    #theme {
+        font-size: 1.75em;
+        padding-bottom: 15px;
+        padding-top: 15px
+    }
+
+    #fleches {
+        margin-top: 20vh
+    }
+}
+
+@media screen and (max-width: 1750px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 3em;
+        margin-top: 55vh
+    }
+
+    #theme {
+        font-size: 1.75em;
+        padding-bottom: 10px;
+        padding-top: 10px
+    }
+
+    #fleches {
+        margin-top: 20vh
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 2.75em;
+        margin-top: 55vh
+    }
+
+    #theme {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+        padding-top: 10px
+    }
+
+    #fleches {
+        margin-top: 20vh
+    }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 2.75em;
+        margin-top: 55vh
+    }
+
+    #theme {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+        padding-top: 10px
+    }
+
+    #fleches {
+        margin-top: 27.5vh
+    }
+
+    #fleche_droite,
+    #fleche_gauche {
+        height: 6vw;
+        width: 6vw
+    }
+}
+
+@media screen and (max-width: 820px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 2em;
+        margin-top: 60vh
+    }
+
+    #theme {
+        font-size: 1.25em;
+        padding-bottom: 10px;
+        padding-top: 10px
+    }
+
+    #fleches {
+        margin-top: 27.5vh
+    }
+
+    #fleche_droite,
+    #fleche_gauche {
+        height: 6vw;
+        width: 6vw
+    }
+}
+
+@media screen and (max-width: 600px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 2em;
+        margin-top: 60vh
+    }
+
+    #theme {
+        font-size: 1.25em;
+        padding-bottom: 10px;
+        padding-top: 10px
+    }
+
+    #fleches {
+        margin-top: 27.5vh
+    }
+
+    #fleche_droite,
+    #fleche_gauche {
+        height: 6vw;
+        width: 6vw
+    }
+}
+
+@media screen and (max-width: 425px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 1.5em;
+        margin-top: 60vh
+    }
+
+    #theme {
+        font-size: 1em;
+        padding-bottom: 10px;
+        padding-top: 10px
+    }
+
+    #fleches {
+        margin-top: 30vh
+    }
+
+    #fleche_droite,
+    #fleche_gauche {
+        height: 6vw;
+        width: 6vw
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 2160px) {
+    #presentation {
+        font-size: 1.4em;
+        margin-top: 60vh
+    }
+
+    #theme {
+        font-size: .9em;
+        padding-bottom: 10px;
+        padding-top: 10px
+    }
+
+    #fleches {
+        margin-top: 30vh
+    }
+
+    #fleche_droite,
+    #fleche_gauche {
+        height: 6vw;
+        width: 6vw
+    }
+}

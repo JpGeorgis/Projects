@@ -1,0 +1,623 @@
+section {
+    height: auto;
+    margin-bottom: 2vh;
+    z-index: 3
+}
+
+form,
+.inline {
+    display: inline
+}
+
+h1 {
+    margin-left: 2.5vw
+}
+
+#bloc_forum {
+    border-radius: 30px;
+    margin: auto;
+    padding: 1vw
+}
+
+#logo_loupe {
+    height: .75vw;
+    margin-top: 1px;
+    width: .75vw
+}
+
+#recherche {
+    border-radius: 50px;
+    margin-left: 1vw;
+    margin-right: .5vw
+}
+
+#zone_recherche {
+    border: none;
+    border-radius: inherit;
+    padding: 4px
+}
+
+.bouton_creation_fil {
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    text-overflow: clip;
+    transition: all 1s ease-out;
+    width: 12.5vw
+}
+
+.bouton_creation_fil,
+.bouton_creation_fil:visited,
+.bouton_creation_fil:hover,
+.bouton_creation_fil:active {
+    color: inherit
+}
+
+.bouton_creation_fil:hover {
+    width: 15vw
+}
+
+#bouton_recherche {
+    border: none;
+    border-radius: 30px;
+    padding: 15px
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 3vh
+}
+
+td {
+    padding: 1vw
+}
+
+.vues,
+.reponses {
+    text-align: center
+}
+
+.der_message {
+    width: 16vw
+}
+
+.logo_topic {
+    height: 4vw;
+    width: 4vw
+}
+
+#bloc_tri {
+    margin-bottom: 2.5vh;
+    margin-left: auto
+}
+
+#bouton_tri {
+    border: none;
+    border-radius: 30px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: all .5s ease-out
+}
+
+#bouton_tri:hover {
+    padding-left: 16px;
+    padding-right: 16px
+}
+
+.selection {
+    border-radius: 15px;
+    margin-right: 1vw;
+    padding: 4px;
+    text-align: center
+}
+
+@media screen and (max-width: 4440px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 70vw
+    }
+
+    .bouton_creation_fil {
+        font-size: 2.5em;
+        margin-bottom: 1vh;
+        margin-left: 1vw;
+        padding: 10px 0
+    }
+
+    #recherche {
+        padding: 1vh
+    }
+
+    #logo_loupe {
+        height: .5vw;
+        width: .5vw
+    }
+
+    #zone_recherche {
+        font-size: 2.5em;
+        padding: 4px;
+        width: 20vw
+    }
+
+    h1 {
+        font-size: 4em;
+        margin-left: 2.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    select {
+        font-size: 1em
+    }
+
+    #bouton_tri {
+        font-size: 1.25em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    .logo_topic {
+        height: 5vw;
+        width: 5vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri {
+        font-size: 2.5em
+    }
+}
+
+@media screen and (max-width: 2560px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 70vw
+    }
+
+    #recherche {
+        padding: 1vh
+    }
+
+    .bouton_creation_fil {
+        font-size: 1.5em;
+        margin-bottom: 1vh;
+        margin-left: 1vw;
+        padding: 1vh 0
+    }
+
+    #logo_loupe {
+        height: .5vw;
+        width: .5vw
+    }
+
+    #zone_recherche {
+        font-size: 1.5em;
+        padding: 4px;
+        width: 20vw
+    }
+
+    h1 {
+        font-size: 2.75em;
+        margin-left: 2.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    select {
+        font-size: 1em
+    }
+
+    #bouton_tri {
+        font-size: 1.25em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    .logo_topic {
+        height: 5vw;
+        width: 5vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri {
+        font-size: 1.5em
+    }
+}
+
+@media screen and (max-width: 1920px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 70vw
+    }
+
+    #recherche {
+        padding: 1vh
+    }
+
+    .bouton_creation_fil {
+        font-size: 1em;
+        margin-bottom: 1vh;
+        margin-left: 1vw;
+        padding: 1vh 0
+    }
+
+    #logo_loupe {
+        height: 1vw;
+        width: 1vw
+    }
+
+    #zone_recherche {
+        font-size: 1em;
+        padding: 4px;
+        width: auto
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-left: 3.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    select {
+        font-size: 1em
+    }
+
+    #bouton_tri {
+        font-size: 1em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    .logo_topic {
+        height: 5vw;
+        width: 5vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri {
+        font-size: .9em
+    }
+}
+
+@media screen and (max-width: 1750px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 80vw
+    }
+
+    #recherche {
+        padding: 1vh
+    }
+
+    .bouton_creation_fil {
+        font-size: .9em;
+        margin-bottom: 1vh;
+        margin-left: 1vw;
+        padding: 10px 0
+    }
+
+    #logo_loupe {
+        height: 1vw;
+        width: 1vw
+    }
+
+    #zone_recherche {
+        font-size: 1em;
+        padding: 4px;
+        width: auto
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-left: 3.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    #bouton_tri {
+        font-size: .9em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    .logo_topic {
+        height: 8vw;
+        width: 8vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri,
+    select {
+        font-size: .9em
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 80vw
+    }
+
+    .bouton_creation_fil {
+        font-size: .8em;
+        margin-bottom: 1vh;
+        margin-left: 4vw;
+        padding: 10px 0;
+        width: 20vw
+    }
+
+    .bouton_creation_fil:hover {
+        width: 25vw
+    }
+
+    #logo_loupe {
+        height: 1vw;
+        width: 1vw
+    }
+
+    #zone_recherche {
+        font-size: .8em;
+        padding: 4px;
+        width: auto
+    }
+
+    h1 {
+        font-size: 1.75em;
+        margin-left: 3.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    #bouton_tri {
+        font-size: .8em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    .logo_topic {
+        height: 8vw;
+        width: 8vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri,
+    select {
+        font-size: .8em
+    }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 90vw
+    }
+
+    .bouton_creation_fil {
+        font-size: .8em;
+        margin-bottom: 1vh;
+        margin-left: 4vw;
+        padding: 10px 0;
+        width: 20vw
+    }
+
+    .bouton_creation_fil:hover {
+        width: 25vw
+    }
+
+    #logo_loupe {
+        height: 2vw;
+        width: 2vw
+    }
+
+    #zone_recherche {
+        font-size: .8em;
+        padding: 4px;
+        width: auto
+    }
+
+    h1 {
+        font-size: 1.75em;
+        margin-left: 3.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    #bouton_tri {
+        font-size: .8em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    .logo_topic {
+        height: 10vw;
+        width: 10vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri,
+    select {
+        font-size: .8em
+    }
+}
+
+@media screen and (max-width: 820px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 90vw
+    }
+
+    .bouton_creation_fil {
+        font-size: .7em;
+        margin-bottom: 1vh;
+        margin-left: 4vw;
+        padding: 10px 0;
+        width: 20vw
+    }
+
+    .bouton_creation_fil:hover {
+        width: 25vw
+    }
+
+    #logo_loupe {
+        height: 2vw;
+        width: 2vw
+    }
+
+    #zone_recherche {
+        font-size: .7em;
+        padding: 4px;
+        width: auto
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin-left: 3.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    #bouton_tri {
+        font-size: .7em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    .logo_topic {
+        height: 10vw;
+        width: 10vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri,
+    select {
+        font-size: .7em
+    }
+}
+
+@media screen and (max-width: 425px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 90vw
+    }
+
+    .bouton_creation_fil {
+        font-size: .5em;
+        margin-bottom: 1vh;
+        margin-left: 4vw;
+        padding: 10px 0;
+        width: 25vw
+    }
+
+    .bouton_creation_fil:hover {
+        width: 27.5vw
+    }
+
+    #logo_loupe {
+        height: 3vw;
+        width: 3vw
+    }
+
+    #zone_recherche {
+        font-size: .5em;
+        padding: 4px;
+        width: auto
+    }
+
+    h1 {
+        font-size: 1.1em;
+        margin-left: 3.5vw
+    }
+
+    .sujet {
+        width: 48vw
+    }
+
+    .logo_topic {
+        height: 10vw;
+        width: 10vw
+    }
+
+    #bouton_tri {
+        font-size: .5em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri,
+    select {
+        font-size: .5em
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 2160px) {
+    #bloc_forum {
+        width: 90vw
+    }
+
+    .bouton_creation_fil {
+        font-size: .5em;
+        margin-bottom: 1vh;
+        margin-left: 2vw;
+        padding: 10px 0;
+        width: 25vw
+    }
+
+    .bouton_creation_fil:hover {
+        width: 27.5vw
+    }
+
+    #logo_loupe {
+        height: 3vw;
+        width: 3vw
+    }
+
+    #zone_recherche {
+        font-size: .5em;
+        padding: 4px;
+        width: auto
+    }
+
+    h1 {
+        font-size: 1em;
+        margin-left: 2.5vw
+    }
+
+    .sujet {
+        width: 50vw
+    }
+
+    .logo_topic {
+        height: 10vw;
+        width: 10vw
+    }
+
+    #bouton_tri {
+        font-size: .5em;
+        padding-left: 1vw;
+        padding-right: 1vw
+    }
+
+    #bouton_recherche,
+    td,
+    #bloc_tri,
+    select {
+        font-size: .5em
+    }
+}

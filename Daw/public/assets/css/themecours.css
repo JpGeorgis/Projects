@@ -1,0 +1,602 @@
+section {
+    height: auto;
+    margin-bottom: 10vh;
+    z-index: 3
+}
+
+.titre {
+    border-radius: 0 0 30px 0;
+    margin: 0;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    text-align: center;
+    width: 70%;
+}
+
+.carousel-items {
+    display: flex;
+    list-style-type: none;
+    overflow-x: scroll;
+    padding: .5rem 0;
+    scroll-snap-type: x mandatory
+}
+
+.carousel-item {
+    flex: 1 0 250px;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    scroll-snap-align: none
+}
+
+.description {
+    color: rgba(243, 243, 243, 1);
+    margin: auto;
+    padding: 10px
+}
+
+#carousel {
+    border-radius: 0 30px 0 0;
+    margin: auto
+}
+
+li {
+    position: relative
+}
+
+#grid {
+    border-radius: 0 30px 0 0;
+    margin: 2rem auto auto;
+    padding-bottom: 2rem
+}
+
+.container {
+    display: inline-block;
+    height: 180px;
+    padding: .5rem;
+    position: relative;
+    width: 320px
+}
+
+#center1 {
+    padding-top: 1rem
+}
+
+#center2 {
+    display: flex
+}
+
+.divBoutons {
+    flex-grow: 1
+}
+
+.boutons_cours {
+    border: none;
+    border-radius: 50px;
+    height: 3vh;
+    margin-top: 3vh;
+    width: 5vw
+}
+
+li p,
+.text {
+    bottom: 2.5vh;
+    left: 2.5vw;
+    position: absolute
+}
+
+@media screen and (max-width: 4440px) and (max-height: 2160px) {
+    .texte {
+        font-size: 3.25em
+    }
+
+    #carousel {
+        width: 70vw
+    }
+
+    .carousel-items {
+        padding: 1rem 0
+    }
+
+    .carousel-item {
+        flex: 1 0 560px;
+        margin-left: 1rem;
+        margin-right: 1rem
+    }
+
+    #grid {
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+        width: 70vw
+    }
+
+    .container {
+        height: 270px;
+        padding: 1rem;
+        width: 480px
+    }
+
+    .text {
+        font-size: 3em
+    }
+
+    #center1 {
+        padding-top: 2.5rem
+    }
+
+    .boutons_cours {
+        font-size: 2.5em;
+        height: 4vh;
+        margin-top: 3vh;
+        width: 10vw
+    }
+
+    video,
+    img {
+        height: 315px;
+        width: 560px
+    }
+}
+
+@media screen and (max-width: 2560px) and (max-height: 2160px) {
+    .texte {
+        font-size: 2.25em
+    }
+
+    #carousel {
+        width: 70vw
+    }
+
+    .carousel-items {
+        padding: 1rem 0
+    }
+
+    .carousel-item {
+        flex: 1 0 320px;
+        margin-left: 1rem;
+        margin-right: 1rem
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 70vw
+    }
+
+    .container {
+        height: 180px;
+        padding: .5rem;
+        width: 320px
+    }
+
+    .text {
+        font-size: 2em
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: 1.5em;
+        height: 4vh;
+        margin-top: 2vh;
+        width: 8vw
+    }
+
+    video,
+    img {
+        height: 180px;
+        width: 320px
+    }
+}
+
+@media screen and (max-width: 1920px) and (max-height: 2160px) {
+    .texte {
+        font-size: 1.5em
+    }
+
+    #carousel {
+        width: 70vw
+    }
+
+    .carousel-items {
+        padding: .5rem 0
+    }
+
+    .carousel-item {
+        flex: 1 0 320px;
+        margin-left: 1rem;
+        margin-right: 1rem
+    }
+
+    video {
+        height: 180px;
+        width: 320px
+    }
+
+    img {
+        height: 144px;
+        width: 256px
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 70vw
+    }
+
+    .container {
+        height: 144px;
+        padding: 1rem;
+        width: 256px
+    }
+
+    .text {
+        font-size: 1.25em
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: .9em;
+        height: 4vh;
+        margin-top: 2vh;
+        width: 8vw
+    }
+}
+
+@media screen and (max-width: 1750px) and (max-height: 2160px) {
+    .texte {
+        font-size: 1.5em
+    }
+
+    #carousel {
+        width: 70vw
+    }
+
+    .carousel-items {
+        padding: .5rem 0
+    }
+
+    .carousel-item {
+        flex: 1 0 320px;
+        margin-left: 1rem;
+        margin-right: 1rem
+    }
+
+    video {
+        height: 180px;
+        width: 320px
+    }
+
+    img {
+        height: 126px;
+        width: 224px
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 70vw
+    }
+
+    .container {
+        height: 126px;
+        padding: 1rem;
+        width: 224px
+    }
+
+    .text {
+        font-size: 1.25em
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: .9em;
+        height: 4vh;
+        margin-top: 2vh;
+        width: 8vw
+    }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 2160px) {
+    .texte {
+        font-size: 1.25em
+    }
+
+    #carousel {
+        width: 80vw
+    }
+
+    .carousel-items {
+        padding: .5rem
+    }
+
+    .carousel-item {
+        flex: 1 0 224px;
+        margin-left: .5rem;
+        margin-right: .5rem
+    }
+
+    video {
+        height: 126px;
+        width: 224px
+    }
+
+    img {
+        height: 108px;
+        width: 192px
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 80vw
+    }
+
+    .container {
+        height: 108px;
+        padding: .75rem;
+        width: 192px
+    }
+
+    .text {
+        font-size: 1.15em
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: .8em;
+        height: 4vh;
+        margin-top: 2vh;
+        width: 8vw
+    }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 2160px) {
+    .texte {
+        font-size: 1.25em
+    }
+
+    #carousel {
+        width: 90vw
+    }
+
+    .carousel-items {
+        padding: .5rem 1rem
+    }
+
+    .carousel-item {
+        flex: 1 0 192px;
+        margin-left: .5rem;
+        margin-right: .5rem
+    }
+
+    video {
+        height: 108px;
+        width: 192px
+    }
+
+    img {
+        height: 81px;
+        width: 144px
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 90vw
+    }
+
+    .container {
+        height: 81px;
+        padding: .5rem;
+        width: 144px
+    }
+
+    .text {
+        bottom: 1vh;
+        font-size: 1.15em;
+        left: 3vw;
+        position: absolute
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: .8em;
+        height: 3vh;
+        margin-top: 1.5vh;
+        width: 10vw
+    }
+}
+
+@media screen and (max-width: 820px) and (max-height: 2160px) {
+    .texte {
+        font-size: 1em
+    }
+
+    #carousel {
+        width: 90vw
+    }
+
+    .carousel-items {
+        padding: .5rem 1rem
+    }
+
+    .carousel-item {
+        flex: 1 0 144px;
+        margin-left: .5rem;
+        margin-right: .5rem
+    }
+
+    video {
+        height: 81px;
+        width: 144px
+    }
+
+    img {
+        height: 72px;
+        width: 128px
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 90vw
+    }
+
+    .container {
+        height: 72px;
+        padding: .25rem;
+        width: 128px
+    }
+
+    .text {
+        bottom: 1.5vh;
+        font-size: .9em;
+        left: 3vw;
+        position: absolute
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: .7em;
+        height: 3vh;
+        margin-top: 1.5vh;
+        width: 10vw
+    }
+}
+
+@media screen and (max-width: 425px) and (max-height: 2160px) {
+    .texte {
+        font-size: .8em
+    }
+
+    #carousel {
+        width: 90vw
+    }
+
+    .carousel-items {
+        padding: .5rem
+    }
+
+    .carousel-item {
+        flex: 1 0 128px;
+        margin-left: .25rem;
+        margin-right: .25rem
+    }
+
+    video {
+        height: 72px;
+        width: 128px
+    }
+
+    img {
+        height: 63px;
+        width: 112px
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 90vw
+    }
+
+    .container {
+        height: 63px;
+        padding: .1rem;
+        width: 112px
+    }
+
+    .text {
+        bottom: 1.5vh;
+        font-size: .7em;
+        left: 3vw;
+        position: absolute
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: .5em;
+        height: 3vh;
+        margin-top: 1.5vh;
+        width: 18vw
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 2160px) {
+    .texte {
+        font-size: .8em
+    }
+
+    #carousel {
+        width: 90vw
+    }
+
+    .carousel-items {
+        padding: .5rem
+    }
+
+    .carousel-item {
+        flex: 1 0 128px;
+        margin-left: .25rem;
+        margin-right: .25rem
+    }
+
+    video {
+        height: 72px;
+        width: 128px
+    }
+
+    img {
+        height: 63px;
+        width: 112px
+    }
+
+    #grid {
+        margin-top: 2rem;
+        padding-bottom: 1.5rem;
+        width: 90vw
+    }
+
+    .container {
+        height: 63px;
+        padding: .1rem;
+        width: 112px
+    }
+
+    .text {
+        bottom: 1.5vh;
+        font-size: .7em;
+        left: 3vw;
+        position: absolute
+    }
+
+    #center1 {
+        padding-top: 2rem
+    }
+
+    .boutons_cours {
+        font-size: .5em;
+        height: 3vh;
+        margin-top: 1.5vh;
+        width: 18vw
+    }
+}

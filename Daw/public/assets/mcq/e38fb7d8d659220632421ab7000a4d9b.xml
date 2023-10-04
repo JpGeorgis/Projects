@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz>
+    <name>Quelques capitales</name>
+    <questions>
+        <question id="1" correct_answer="1">
+            <text>Quelle est la capitale de la France</text>
+            <answer id="0">Bruxelles</answer>
+            <answer id="1">Paris</answer>
+            <answer id="2">Dijon</answer>
+        </question>
+        <question id="2" correct_answer="0">
+            <text>La capitale du Venezuela est </text>
+            <answer id="0">Caracas</answer>
+            <answer id="1">Mexico</answer>
+            <answer id="2">San Antonio</answer>
+        </question>
+        <question id="3" correct_answer="2">
+            <text>Bogota est la capitale </text>
+            <answer id="0">De la Russie</answer>
+            <answer id="1">Du Mexique</answer>
+            <answer id="2">De la Colombie</answer>
+        </question>
+        <question id="4" correct_answer="0">
+            <text>La capitale de l'Australie est </text>
+            <answer id="0">Canberra</answer>
+            <answer id="1">Sidney</answer>
+            <answer id="2">Melbourne</answer>
+        </question>
+        <question id="5" correct_answer="1">
+            <text>La capitale de la Suisse est </text>
+            <answer id="0">Zurich</answer>
+            <answer id="1">Berne</answer>
+            <answer id="2">Lausanne</answer>
+        </question>
+    </questions>
+</quiz>

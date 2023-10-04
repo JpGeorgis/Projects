@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE quiz SYSTEM "quiz.dtd">
+<quiz>
+    <name>Les grandes dates de la France</name>
+    <questions>
+        <question id="1" correct_answer="1">
+            <text>Quelles sont les dates de la grande Guerre ?</text>
+            <answer id="0">1939-1945</answer>
+            <answer id="1">1914-1918</answer>
+            <answer id="2">1969</answer>
+        </question>
+        <question id="2" correct_answer="0">
+            <text>L'ONU a été crée en </text>
+            <answer id="0">1945</answer>
+            <answer id="1">1965</answer>
+            <answer id="2">2002</answer>
+        </question>
+        <question id="3" correct_answer="2">
+            <text>la Vᵉ République a été écrite en </text>
+            <answer id="0">1946</answer>
+            <answer id="1">1987</answer>
+            <answer id="2">1958</answer>
+        </question>
+        <question id="4" correct_answer="0">
+            <text>Le traité de Rome a été signé en </text>
+            <answer id="0">1957</answer>
+            <answer id="1">1967</answer>
+            <answer id="2">1977</answer>
+        </question>
+        <question id="5" correct_answer="1">
+            <text>Hitler s'est suicidé le </text>
+            <answer id="0">30 mai 1945</answer>
+            <answer id="1">30 avril 1945</answer>
+            <answer id="2">10 avril 1945</answer>
+        </question>
+    </questions>
+</quiz>

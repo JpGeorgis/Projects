@@ -1,0 +1,21 @@
+<script>
+    theme = () => {
+        const links = document.querySelector("link")
+
+        let id = 0
+
+        if (links.getAttribute("href")==="{% assets(css/bleu.css) %}") {
+            links.setAttribute('href', "{% assets(css/gris.css) %}")
+        } else {
+            links.setAttribute('href', "{% assets(css/bleu.css) %}")
+            id = 1
+        }
+
+        $.ajax( {
+            type: "POST",
+            url: "{% route(/change/theme/) %}",
+            data: {"theme": id}
+        });
+
+    }
+</script>
