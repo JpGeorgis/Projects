@@ -1,0 +1,84 @@
+nav{
+	margin: 27pw auto 0;
+	position: relative;
+	width: 590px;
+	height: 50px;
+	background-color: white;
+	border-radius: 9px;
+	font-size: 0;
+	font-weight: bold;
+}
+
+nav a{
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: black;
+	cursor: pointer;
+
+}
+
+nav .animation{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 8px;
+
+}
+
+a:nth-child(1){
+	width: 100px;
+}
+a:nth-child(2){
+	width: 110px;
+}
+a:nth-child(3){
+	width: 100px;
+}
+a:nth-child(4){
+	width: 160px;
+}
+a:nth-child(5){
+	width: 120px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+	width: 100px;
+	left: 0;
+	background-color: #062384;
+}
+nav .start-about, a:nth-child(2):hover~.animation{
+	width: 110px;
+	left: 100px;
+	background-color: #3F44A0;
+}
+nav .start-blog, a:nth-child(3):hover~.animation{
+	width: 100px;
+	left: 210px;
+	background-color: #5D58C3;
+}
+nav .start-portfolio, a:nth-child(4):hover~.animation{
+	width: 160px;
+	left: 310px;
+	background-color: #6C64D7;
+}
+nav .start-contact, a:nth-child(5):hover~.animation{
+	width: 120px;
+	left: 470px;
+	background-color: #7292FA;
+}
+.navb{
+	font-size: 12px;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+
+}
+
