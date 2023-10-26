@@ -1,0 +1,12 @@
+#container {
+	margin: 0px auto;
+	width: 400px;
+	height: 300px;
+	border: 10px #333 solid;
+    margin-right: 0;
+}
+#videoElement {
+	width: inherit;
+	height: inherit;
+	background-color: #666;
+}

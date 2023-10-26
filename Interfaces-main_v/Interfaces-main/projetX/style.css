@@ -1,0 +1,43 @@
+body {
+  background-image: url("backgd.jpg");
+}
+
+#canvas{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    border: 3px #000 solid;
+    border-radius: 10px;
+
+}
+
+#video{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index:0;
+  border: 3px #000 solid;
+	border-radius: 10px;
+}
+
+.bgtitle
+{
+  padding-top: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, th, td {
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(186, 93, 93);
+  height: 50px;
+  width: 1400px;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+

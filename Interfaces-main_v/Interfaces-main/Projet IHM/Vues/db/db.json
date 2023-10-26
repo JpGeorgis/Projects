@@ -1,0 +1,652 @@
+{
+    "Calcul_Mentale":
+    [
+              {
+              "id":1,
+              "exercice":"371.7?738.9 ~ ?",
+              "choix1":"0.4",
+              "choix2":"0.5",
+              "choix3":"0.6",
+              "choix4":"0.8",
+              "resp":"0.5",
+              "description":" 0.5 ? 371.7?738.9 ~ 370?740 ~ 0.5"
+  
+             },
+             {
+              "id":2,
+              "exercice":"0.04 / 10 = ?",
+              "choix1":"0.4",
+              "choix2":"0.04",
+              "choix3":"0.004",
+              "choix4":"0.0004",
+              "resp":"0.004",
+              "description":"0.004 ? On decale la virgule de 1 rang vers la gauche"
+             }, 
+             {
+                 "id":3,
+              "exercice":"0.15 x 0.1 = ?",
+              "choix1":"1.5",
+              "choix2":"0.015",
+              "choix3":"0.0015",
+              "choix4":"0.00015", 
+              "resp":"0.015",
+              "description":"0.015 ? On decale la virgule de 1 rang vers la gauche"
+             },
+             {
+              "id":4,
+              "exercice":"6 792?1.12 ~ ?",
+              "choix1":"6",
+              "choix2":"100",
+              "choix3":"6000",
+              "choix4":"7000",
+              "resp":"6000",
+              "description":"6 000 ? 6 792?1.12 ~ 6 800?1.1 ~ 6 000"
+             },
+             {
+              "id":5,
+              "exercice":"2 932 x 512 ~ ?",
+              "choix1":"9000",
+              "choix2":"15000",
+              "choix3":"150000",
+              "choix4":"1500000",
+              "resp":"1500000",
+              "description":"1 500 000 ? 2 932 x 512 ~ 3 000 x 500 ~ 1 500 000"
+             },
+             {
+              "id":6,
+              "exercice":"17.7 x 8.2?4.1 x 1.9 ~ ?",
+              "choix1":"180",
+              "choix2":"1.8",
+              "choix3":"18",
+              "choix4":"2.8",
+              "resp":"18",
+              "description":"18 ? 17.7 x 8.2?4.1 x 1.9 ~ 18 x 8?4 x 2 ~ 18"
+             },
+             {
+               "id":7,
+              "exercice":"20.061?12.173 ~ ?",
+              "choix1":"1.5",
+              "choix2":"1.3",
+              "choix3":"1.7",
+              "choix4":"1.9",
+              "resp":"1.7",
+              "description":"1.7 ? 20.061?12.173 ~ 20?12 ~ 5?3 ~ 1.7"
+             },
+             {
+              "id":8,
+              "exercice":"5 x 3.8 = ?",
+              "choix1":"20.4",
+              "choix2":"18.8",
+              "choix3":"19.0",
+              "choix4":"17.4",
+              "resp":"19.0",
+              "description":"19.0 ? 5 x 3.8 = 5 x (4 - 0.2) = 20 - 1 = 19"
+             },
+             {
+                "id":9,
+              "exercice":"3 x 6.1 = ?",
+              "choix1":"18.3",
+              "choix2":"18.6",
+              "choix3":"24.6",
+              "choix4":"18.1",
+              "resp":"18.3",
+              "description":"18.3 ? 3 x 6.1 = 3 x (6 + 0.1) = 18 + 0.3 = 18.3"
+             },
+             {
+              "id":10,
+              "exercice":"16.47 / 100 = ?",
+              "choix1":"0.1647",
+              "choix2":"164.7",
+              "choix3":"1.647",
+              "choix4":"1647",
+              "resp":"0.1647",
+              "description":"0.1647 ? On decale la virgule de 2 rangs vers la gauche"
+             },
+             {
+              "id":11,
+              "exercice":"209 x 50 = ?",
+              "choix1":"1 045",
+              "choix2":"1 090",
+              "choix3":"10 900",
+              "choix4":"10 450",
+              "resp":"1",
+              "description":"0.1647 ? On decale la virgule de 2 rangs vers la gauche"
+             },
+             {
+              "id":12,
+              "exercice":"488 x 101 = ?",
+              "choix1":"49 288",
+              "choix2":"49 200",
+              "choix3":"49 288",
+              "choix4":"1647",
+              "resp":"49 288",
+              "description":"49 288 -> 488 x 101 = 488 x (100 + 1) = 48 800 + 488 = 49 288"
+             },
+             {
+              "id":13,
+              "exercice":"46 x 0.25 = ?",
+              "choix1":"92.5",
+              "choix2":"102.5",
+              "choix3":"10.5",
+              "choix4":"11.5",
+              "resp":"11.5",
+              "description":"11.5 -> 46 x 0.25 = 46 / 4 = 46 / 2 / 2 = 23 / 2 = 11.5"
+             },
+             {
+              "id":14,
+              "exercice":"4.3 + 23 + 1.7 + 77 = ?",
+              "choix1":"106.0",
+              "choix2":"108.0",
+              "choix3":"110.8",
+              "choix4":"111",
+              "resp":"106.0",
+              "description":"106.0 -> 4.3 + 23 + 1.7 + 77 = 4.3 + 1.7 + 23 + 77 = 6 + 100 = 106"
+             },
+             {
+              "id":15,
+              "exercice":"12 + 5 x (9 - 8 - 1) = ?",
+              "choix1":"12",
+              "choix2":"15",
+              "choix3":"23",
+              "choix4":"90",
+              "resp":"12",
+              "description":"12 -> 12 + 5 x (9 - 8 - 1) = 12 + 5 x 0 = 12"
+             },
+             {
+              "id":16,
+             
+              "exercice":"67 x 2.5 = ?",
+              "choix1":"147.5",
+              "choix2":"167.5",
+              "choix3":"187.5",
+              "choix4":"189.3",
+              "resp":"167.5",
+              "description":"167.5 -> 67 x 2.5 = 67 x 10 / 4 = 670 / 4 = 670 / 2 / 2 = 335 / 2 = 167.5"
+             },
+             {
+              "id":17,
+              "exercice":"12 400 / 50 = ?",
+              "choix1":"124",
+              "choix2":"248",
+              "choix3":"1.647",
+              "choix4":"1647",
+              "resp":"248",
+              "description":"248 -> 12 400 / 50 = 12 400 / 100 x 2 = 124 x 2 = 248"
+             },
+             {
+              "id":18,
+              "exercice":"16.47 / 100 = ?",
+              "choix1":"247.5",
+              "choix2":"249",
+              "choix3":"248",
+              "choix4":"1647",
+              "resp":"248",
+              "description":"248 -> 12 400 / 50 = 12 400 / 100 x 2 = 124 x 2 = 248"
+             },
+             {
+              "id":19,
+              "exercice":"166 x 101 = ?",
+              "choix1":"166 166",
+              "choix2":"1 826",
+              "choix3":"1 661",
+              "choix4":"16 766",
+              "resp":"16 766",
+              "description":"16 766 -> 166 x 101 = 166 x (100 + 1) = 16 600 + 166 = 16 766"
+             },
+             {
+              "id":20,
+              "exercice":"44 x 99 = ?",
+              "choix1":"4 356",
+              "choix2":"4 366",
+              "choix3":"396",
+              "choix4":"3 960",
+              "resp":"4 356",
+              "description":"4 356 -> 44 x 99 = 44 x (100 - 1) = 4 400 - 44 = 4 356"
+             }
+           
+  
+    ],
+        
+      "Vocabulaire":[
+                       {
+                           "id":1,
+                           "exercice":"Quel est le synonyme de : PARODIE",
+                          "choix1":"Rire",
+                          "choix2":"Caricature",
+                          "choix3":"Preponderance",
+                          "choix4":"Diversion",
+                          "resp":"Caricature",
+                          "description":""
+                       },
+                       {
+                           "id":2,
+                           "exercice":"Quel est le synonyme de : VASTE",
+                          "choix1":"Grand",
+                          "choix2":"Rituel",
+                          "choix3":"Equidistant",
+                          "choix4":"Pittoresque",
+                          "resp":"Grand",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":3,
+                           "exercice":"Quel est le synonyme de : COUTUME",
+                          "choix1":"Utilisation",
+                          "choix2":"Tradition",
+                          "choix3":"Desir",
+                          "choix4":"Perception",
+                          "resp":"Tradition",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":4,
+                           "exercice":"Quel est le synonyme de : RETENUE",
+                          "choix1":"Inspection",
+                          "choix2":"Tendresse",
+                          "choix3":"Humilite",
+                          "choix4":"Attention",
+                          "resp":"Humilite",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":5,
+                           "exercice":"Quel est le synonyme de : IRRATIONNEL",
+                          "choix1":"Absurde",
+                          "choix2":"Intransigeant",
+                          "choix3":"Perdu",
+                          "choix4":"Irremediable",
+                          "resp":"Absurde",
+                          "description":""
+                       },
+                       {
+                           "id":6,
+                           "exercice":"Quel est le synonyme de : NOTABLE",
+                          "choix1":"Ultime",
+                          "choix2":"Routinier",
+                          "choix3":"Remarquable",
+                          "choix4":"Libre",
+                          "resp":"Remarquable",
+                          "description":""
+                       },
+                       {
+                           "id":7,
+                           "exercice":"Quel est le synonyme de : PLAUSIBLE",
+                          "choix1":"Attirant",
+                          "choix2":"Credible",
+                          "choix3":"Fine",
+                          "choix4":"Ferme",
+                          "resp":"Credible",
+                          "description":""
+                       },
+                       {
+                           "id":8,
+                           "exercice":"Quel est le synonyme de : ASSIDUITE",
+                          "choix1":"Causticite",
+                          "choix2":"Intention",
+                          "choix3":"Abandon",
+                          "choix4":"Difficulte",
+                          "resp":"Intention",
+                          "description":""
+                       },
+                       {
+                           "id":9,
+                           "exercice":"Quel est le synonyme de : ANTERIEUR",
+                          "choix1":"Provenant",
+                          "choix2":"Candide",
+                          "choix3":"Direct",
+                          "choix4":"Precedent",
+                          "resp":"Precedent",
+                          "description":""
+                       },
+                       {
+                           "id":10,
+                           "exercice":"Quel est le synonyme de : AVIDE",
+                          "choix1":"Digne",
+                          "choix2":"Verite",
+                          "choix3":"Cupide",
+                          "choix4":"Vertige",
+                          "resp":"Cupide",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":11,
+                           "exercice":"Quel est le synonyme de : CIRCONSTANCE",
+                          "choix1":"Allure",
+                          "choix2":"Experience",
+                          "choix3":"Disconvenance",
+                          "choix4":"Conjoncture",
+                          "resp":"Conjoncture",
+                          "description":"Conjoncture -> Occasion particuliere"
+                       }
+                       ,
+                       {
+                           "id":12,
+                           "exercice":"Quel est le synonyme de : APPRECIER",
+                          "choix1":"Savourer",
+                          "choix2":"Reunir",
+                          "choix3":"Comprendre",
+                          "choix4":"Regler",
+                          "resp":"Savourer",
+                          "description":"Savourer -> Deguster quelque chose"
+                       }
+                       ,
+                       {
+                           "id":13,
+                           "exercice":"Quel est le synonyme de : PRUDENCE",
+                          "choix1":"Vigilance",
+                          "choix2":"Absence",
+                          "choix3":"Amusement",
+                          "choix4":"Negligence",
+                          "resp":"Vigilance",
+                          "description":"Vigilance -> Surveillance"
+                       }
+                       ,
+                       {
+                           "id":14,
+                           "exercice":"Quel est le synonyme de : SACRILEGE",
+                          "choix1":"Conformisme",
+                          "choix2":"Rite",
+                          "choix3":"Heresie",
+                          "choix4":"Propagation",
+                          "resp":"Rite",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":15,
+                           "exercice":"Quel est le synonyme de : COMPLICITE",
+                          "choix1":"Collusion",
+                          "choix2":"Hostilite",
+                          "choix3":"Confusion",
+                          "choix4":"Forfait",
+                          "resp":"Collusion",
+                          "description":"Collusion -> Entente entre personnes"
+                       }
+                       ,
+                       {
+                           "id":16,
+                           "exercice":"Quel est le synonyme de : AVENANT",
+                          "choix1":"Abrupt",
+                          "choix2":"Brusque",
+                          "choix3":"Affable",
+                          "choix4":"Intraitable",
+                          "resp":"Affable ",
+                          "description":"Affable -> Personne qui plait par sa bonne grace"
+                       }
+                       ,
+                       {
+                           "id":17,
+                           "exercice":"Quel est le synonyme de : DIVERGENCE",
+                          "choix1":"Concorde",
+                          "choix2":"Dissension",
+                          "choix3":"Harmonie",
+                          "choix4":"Diligence",
+                          "resp":"Dissension",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":18,
+                           "exercice":"Quel est le synonyme de : DELETERE",
+                          "choix1":"Salubre",
+                          "choix2":"Courageux",
+                          "choix3":"Tonique",
+                          "choix4":"Sain",
+                          "resp":"Courageux",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":19,
+                           "exercice":"Quel est le synonyme de : FRASQUE",
+                          "choix1":"Banalite",
+                          "choix2":"Conformisme",
+                          "choix3":"Incartade",
+                          "choix4":"Composition",
+                          "resp":"Incartade",
+                          "description":"Incartade -> ecart de conduite"
+                       }
+                       
+            ],
+         
+        "Priorites_operations":[
+              {
+                  "id":1,
+                  "exercice":"-2,5 x (-2) + 3 x (-0,5) =",
+                  "resp":"3.5",
+                 
+                  "description":" 3.5 -> -2,5 x (-2) + 3 x (-0,5) = +5,0 -1,5 = 3,5"
+              },
+              {
+                  "id":2,
+                  "exercice":"(5 - 3) x (5 / 2) + 1 =",
+                  "resp":"6",
+                  
+                  "description":" 6 -> (5 - 3) x (5 / 2) + 1 = 2 x 2,5 + 1 = 5 + 1 = 6"
+              },
+              {
+                  "id":3,
+                  "exercice":"- 6 - 2 x [5 / (3 - 1)] =",
+                  "resp":"-11",
+                  "description":"-11 -> - 6 - 2 x [5 / (3 - 1)] = - 6 - 2 x [5 / 2] = - 6 - 5 = -11"
+              },
+              {
+                  "id":4,
+                  "exercice":" 2 x (3 + 5)2 =",
+                  "resp":"128",
+                  "description":"128 -> 2 x (3 + 5)2 = 2 x (3 + 5) x (3 + 5) = 2 x 8 x 8 = 128"
+              },
+              {
+                  "id":5,
+                  "exercice":"10,2 - 5 x 2 x (3) puis 0 =",
+                  "resp":"0.2",
+                  "description":"0.2 -> 10,2 - 5 x 2 x (30) = 10.2 - 5 x 2 x 1 = 10,2 - 10.0 = 0,2"
+              },
+              {
+                  "id":6,
+                  "exercice":"(15 - 9) / (9 - 15) =",
+                  "resp":"-1",
+                  "description":"-1 -> (15 - 9) / (9 - 15) = 6 / (-6) = -1"
+              },
+              {
+                  "id":7,
+                  "exercice":"3 x ( 3 + 3 / 3 puis 2 ) =",
+                  "resp":"10",
+                  "description":"10 -> 3 x ( 3 + 3 / 32 ) = 3 x ( 3 + 1/3) = 9 + 1 = 10"
+              },
+              {
+                  "id":8,
+                  "exercice":"- 8 - 9 x 2 + 10 =",
+                  "resp":"-16",
+                  "description":"-16 -> - 8 - 9 x 2 + 10 = - 8 - 18 + 10 = - 16"
+              },
+              {
+                  "id":9,
+                  "exercice":"3 x [(5 / 10 + 1,5) / 2] x 3 puis 2 =",
+                  "resp":"27",
+                  "description":"27 -> 3 x [(5 / 10 + 1,5) / 2] x 32 = 3 x [(0.5 + 1,5)/2] x 3x3 = 3 x [1] x 9 = 27"
+              },
+              {
+                  "id":10,
+                  "exercice":"(5 x 2) / (9 + 3 - 2) - 5 =",
+                  "resp":"-4",
+                  "description":"-4 -> (5 x 2) / (9 + 3 - 2) - 5 = 10 / 10 - 5 = 1 - 5 = -4"
+              }
+  
+     
+  
+        ],
+        "orthographes":[
+             {
+                           "id":1,
+                           "exercice":"Le nom commun ci-dessous est-il bien orthographie? Coline",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Colline"
+                       },
+                       {
+                           "id":2,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie? Absence",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"oui",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":3,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Aileurs",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Ailleurs"
+                       }
+                       ,
+                       {
+                           "id":4,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Appercevoir",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Apercevoir"
+                       }
+                       ,
+                       {
+                           "id":5,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Language",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Langage"
+                       },
+                       {
+                           "id":6,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Certe",
+                         "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Certes"
+                       },
+                       {
+                           "id":7,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Parallele",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":""
+                       },
+                       {
+                           "id":8,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Soutien",
+                           "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"oui",
+                          "description":"oui"
+                       },
+                       {
+                           "id":9,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Cauchemar",
+                           "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"oui",
+                          "description":"oui"
+                       },
+                       {
+                           "id":10,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Devellopper",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Developper"
+                       },
+                       {
+                           "id":11,
+                           "exercice":"Le nom commun ci-dessous est-il bien orthographie? Malgres",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Malgre"
+                       },
+                       {
+                           "id":12,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie? Interessant",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"oui",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":13,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Parmis",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Parmi"
+                       }
+                       ,
+                       {
+                           "id":14,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Vingt",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":""
+                       }
+                       ,
+                       {
+                           "id":15,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Milieu",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"oui",
+                          "description":""
+                       },
+                       {
+                           "id":16,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Existance",
+                         "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Existence"
+                       },
+                       {
+                           "id":17,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Connection",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Connexion"
+                       },
+                       {
+                           "id":18,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Convergeance",
+                           "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Convergence"
+                       },
+                       {
+                           "id":19,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Precedent",
+                           "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"oui",
+                          "description":"oui"
+                       },
+                       {
+                           "id":20,
+                           "exercice":"Le mot ci-dessous est-il bien orthographie?: Traffic",
+                          "choix1":"oui",
+                          "choix2":"non",
+                          "resp":"non",
+                          "description":"Non -> Trafic"
+                       }
+        ]
+  
+   }

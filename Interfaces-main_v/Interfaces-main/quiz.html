@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <title>Quizz Example</title>
+  <meta charset="utf-8">
+ <!-- <meta http-equiv="refresh" [content]="min">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gruppo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="../public/js/ajax.js"></script>
+  <script src="../public/js/test-action.js"></script>
+  <script src="../public/js/index.js"></script>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    canvas {
+        
+      position: static;
+      padding-left: 800px;
+      margin-top: -50%;
+      width:720;
+      height: 560;
+    }
+    .question{
+    width: 9%;
+    height: 25px;
+    background-color:#DCBF2E;
+    margin-left: 3%;
+    margin-top: 1%;
+   
+ }
+ .pane{
+     display: flex;
+     flex-wrap: wrap;
+    
+ }
+ 
+ .btn{
+    margin-left: 89.5%;
+ 
+ }
+ 
+ .numQ{
+     width: 4%;
+     height: 30px;
+     background-color: black;
+     padding-top: 0.2%;
+     color: white;
+     text-align: center;
+     font-size: 18px;
+     border-radius: 50%;
+     font-family: 'Poppins', sans-serif;
+ }
+ .divEntete{
+     display: flex;
+ }
+ .exercice{
+     font-family: "Times New Roman", Times, serif;
+     margin-left: 1.5%;
+     font-size: 28px;
+ 
+ }
+ #choix1,#choix2,#choix3,#choix4{
+     margin-left: 3%;
+     font-size: 20px;
+ }
+ .div3{
+     margin-top: 2%;
+     
+ }
+ .divp{
+   margin-right: -1.15%;
+     width: 80%;
+     float: right;
+    
+ }
+ #affichage{
+      text-align:  center;
+      font-size:42px;
+       display: none;
+       font-family: 'Pacifico', cursive;
+        margin-top: 18%;
+        margin-bottom: 34%;
+     }
+ #democlass{
+     color: red;
+ }
+ .container{
+     height: 650px ;
+ }
+ .divPrincipale{
+     width: 80%;
+     height: 800px;
+     background-color: #FAFAFA;
+     margin-top: 2%;
+     margin-left: 12%;
+     border: 1px black solid;
+    
+ }
+ .description_test{
+     width: 18%;
+     background-color:#FAFAFA;
+     height: 497.5px;
+ }
+ .pane{
+     height: 80px;
+ }
+ .niveau{
+     margin-top: -5%;
+     padding-left: 4%;
+ }
+ .infoTest{
+     margin-left: 23%;
+     padding-top: 22%;
+ }
+ .imges{
+     width: 14%;
+     height: 30px;
+     margin-left: 18%;
+ }
+ .name_Test{
+     font-size: 25px;
+     font-family: 'Cabin Condensed', sans-serif;
+   margin-left: 24%;
+   margin-top: 16%;
+ }
+ .Informations{
+     margin-left: 15%;
+    padding-top: 10%;
+    margin-top: 16%;
+ 
+ }
+ .qts{
+     width: 10%;
+     padding-left: 3%;
+ }
+ .divRepon{
+     display: flex;
+     padding-top: 2%;
+ }
+ .qtP{
+     background-color: #826C01;
+ }
+ .pa{
+     padding-top: 2%;
+ }
+ .divB{
+     width: 100%;
+     display: block;
+     height: 820px;
+     
+ }
+ 
+ 
+ .quizSe{
+     font-size: 22px;
+     font-family: 'Sen', sans-serif;
+    margin-bottom: 7%;
+ }
+ .niveau{
+     font-family: system-ui;
+     font-size: 17px;
+     font-family: 'Poppins', sans-serif;
+ }
+ .pI{
+     margin-left: 5%;
+     font-size: 15px;
+     font-family: 'Poppins', sans-serif;
+ }
+ .questione{
+     width: 9%;
+     height: 19px;
+     background-color:#DCBF2E;
+     margin-left: 2%;
+ }
+ #btnGet{
+  margin-top: 2%;
+  width: 30%;
+  margin-left: 35%;
+  height: 90px;
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 34%;
+  background-color: #FFFB01;
+  border-color:   #FFFB01;
+  border-radius: 10px;
+ }
+ 
+ .divBa{
+     height: 560px;
+     width: 100%;
+    text-align: center;
+ 
+ }
+ .Info{
+     font-size: 21px;
+     font-family: 'Poppins', sans-serif;
+ }
+ .tmp{
+     display: flex;
+ }
+ .nbrQ{
+     
+ 
+     margin-left: 9%;
+     font-family: 'Gruppo', cursive;
+   font-size: 24px;
+   
+ }
+ .qi{
+    font-size: 20px;
+    font-family: 'Poppins';
+   margin-left: 18%;
+   margin-top: 9%;
+ }
+ .icon{
+     width: 50%;
+   
+ }
+ .divDomi{
+     display: none;
+ }
+ .tempss{
+   text-align: center;
+   margin-left:87%;
+   width: 5%;
+   font-size:22px;
+  margin-bottom: -2%;
+  border-left: 1px black solid;
+  border-top: 1px black solid;
+  border-right: 1px black solid;
+  font-family: 'Poppins', sans-serif;
+ 
+ }
+ .nomQtest{
+     text-align: center;
+     font-size: 25px;
+     font-family: 'Poppins', sans-serif;
+    margin-top: 16%;
+ }
+ 
+ .resulte{
+     margin-left: 12%;
+     font-size: 37px;
+     font-family: 'Roboto Mono', monospace;
+     border-bottom: 1px black solid;
+     border-left: 1px black solid;
+     border-right: 1px black solid;
+     width: 8%;
+     text-align: center;
+ }
+ .divER{
+     display: flex;
+ }
+ .tempQuiP{
+     margin-left:  20%;
+     font-size: 30px;
+     font-family: 'Roboto Mono', monospace;
+     border-bottom: 1px black solid;
+     border-left: 1px black solid;
+     border-right: 1px black solid;
+     width: 8%;
+     text-align: center;
+ }
+ .tps{
+     float: right;
+     margin-right: 8% ;
+     margin-top: -4.2%;
+     font-size: 37px;
+     width: 8%;
+     font-family: 'Roboto Mono', monospace;
+     border-bottom: 1px black solid;
+     border-left: 1px black solid;
+     border-right: 1px black solid;
+     text-align: center;
+ }
+ .btnAf{
+     margin-top: 25%;
+     margin-right: 12%;
+ }
+ .testImage{
+     display: none;
+    margin-left: 100%;    
+   
+ }
+ #kama{
+     margin-left: 2%;
+ }
+ #game{
+     margin-left: 27%; 
+   
+     margin-top: 4%;
+     border:1px black solid;
+ }
+ .btn67{
+     background-color:white;
+     margin-left: 13%;
+     font-family: 'Roboto Mono', monospace;
+     font-size: 20px;
+ 
+ }
+ .divO{
+    margin-top: 4%;
+    margin-bottom: 3%;
+    margin-left: 15%;
+     display: block; 
+ }
+ .testImag{
+     height: 400px; margin-bottom: -60%;
+ }
+ .btn34{
+     margin-top: 2%;
+     
+ }
+ .paneG{
+     height: 797px;
+ }
+ #count{
+     font-size: 40px;
+     font-family: 'Poppins', sans-serif;
+ }
+ #board{
+     position: relative;
+     width: 454px;
+     height: 454px;
+     margin-left: 25%;
+     margin-top: 4%;
+     border: solid 2px #2f4050;
+     background: #eeeeee;
+     /*background-image: url(bg1.png);
+     background-repeat: no-repeat;*/
+         }
+         .tile {
+     width: 90px;
+     height: 90px;
+     text-align: center;
+     font-size: 70px;
+     font-weight: 600;
+     line-height: 90px;
+     color: #fff;
+ } 
+    div {
+     display: block;
+ }
+ .tile21 {
+     position: absolute;
+     top: 360px;
+     left: 0;
+ }
+  .tile16 {
+     position: absolute;
+     top: 90px;
+     left: 270px;
+ }
+  .tile10 {
+     position: absolute;
+     top: 90px;
+     left: 360px;
+ }
+ .tile25 {
+     position: absolute;
+     top: 360px;
+     left: 360px;
+ }
+ .tile19 {
+     position: absolute;
+     top: 270px;
+     left: 270px;
+ }
+ .tile11 {
+     position: absolute;
+     top: 180px;
+     left: 0;
+ }
+ .tile12 {
+     position: absolute;
+     top: 180px;
+     left: 90px;
+ }
+ .tile24 {
+     position: absolute;
+     top: 360px;
+     left: 270px;
+ }
+ .tile7 {
+     position: absolute;
+     top: 90px;
+     left: 90px;
+ }
+ .tile4 {
+     position: absolute;
+     top: 0;
+     left: 270px;
+ }
+ .tile5 {
+     position: absolute;
+     top: 0;
+     left: 360px;
+ }
+ .tile13 {
+     position: absolute;
+     top: 180px;
+     left: 180px;
+ }
+ .tile15 {
+     position: absolute;
+     top: 180px;
+     left: 360px;
+ }
+ .tile14 {
+     position: absolute;
+     top: 180px;
+     left: 270px;
+ }
+ .tile4 {
+     position: absolute;
+     top: 0;
+     left: 270px;
+ }
+ .tile5{
+        position: absolute;
+     top: 0;
+     left: 360px;
+ }
+ .tile18 {
+     position: absolute;
+     top: 270px;
+     left: 180px;
+ }
+ .tile8 {
+     position: absolute;
+     top: 90px;
+     left: 180px;
+ }
+ .tile22 {
+     position: absolute;
+     top: 360px;
+     left: 90px;
+ }
+ .tile1 {
+     position: absolute;
+     top: 0;
+     left: 0;
+ }
+ .tile2 {
+     position: absolute;
+     top: 0;
+     left: 90px;
+ }
+ .tile3 {
+     position: absolute;
+     top: 0;
+     left: 180px;
+ }
+ .tile20 {
+     position: absolute;
+     top: 270px;
+     left: 360px;
+ }
+ .tile6 {
+     position: absolute;
+     top: 90px;
+     left: 0;
+ }
+ .tile9 {
+     position: absolute;
+     top: 90px;
+     left: 270px;
+ }
+ .tile17 {
+     position: absolute;
+     top: 270px;
+     left: 90px;
+ }
+ .tile23 {
+     position: absolute;
+     top: 360px;
+     left: 180px;
+ }
+ .divLetter{
+     display: none;
+ }
+ .inpuN{
+     width: 10px;
+     height: 60px;
+ }
+ .div2{
+     display: none;
+ }
+ .responsee{
+     font-family: 'Poppins', sans-serif;
+     font-size:19px;
+ }
+ .div4{
+     display: none;
+ }
+ #divI{
+     display: none;
+     margin-left: 26%;
+ }
+ .pAide{
+     font-family: system-ui;
+     font-size: 17px;
+     font-family: 'Poppins', sans-serif; 
+ }
+  </style>
+</head>
+
+<body onload="main()">
+	
+	<h2 class="tempss" id="compteur">03:03</h2>   
+		<div class="divPrincipale">
+			
+<div class="container divp">
+
+  <div class="panel panel-default paneG">
+    <div id ="divC" class="panel-heading pane pa">
+
+		<video id="video" style="padding-left: 350px; margin-left: 180px; margin-top: 360px;" width="720" height="560" autoplay muted></video>
+	
+		 </div>
+     <!--<p class="nomQtest" id="nomQtest">SQLI TEST</p>
+     <button id="btnGet" (click)="start()">Commencer Le Test</button>-->
+     
+	 
+	<div class="panel-body divB "  id="divB">
+		<div id="kama">
+       <span class="divEntete"> 
+		<p class="numQ">01</p>
+		<p class="exercice" id="exer">PHP EST LANGUAGE </p>	</span>
+		<img [src]="imagePath" class="image" id="imQ" />
+		<div class="divDomi" id="dom">
+			
+		
+		
+		</div>
+		<div id="div2" class="div2">
+			<span class="responsee">Tapez votre réponse: <input type="text" size="8" id="txt" maxlength="5" name="A1" class="required"></span>
+		</div>
+		<div id="div4" class="div4">
+			<span class="responsee">Tapez votre réponse: <input type="text" size="1" id="txt_1"  maxlength="1" name="A1_1" class="required"></span>
+		</div>
+	<div class="div3" >
+		<input type="radio"  id="huey" name="choix" [value]="choix01" (click)="myfunction()" checked>
+		<label id="choix1">INTERPRETE</label>
+	  </div>
+	  
+	  <div>
+		<input type="radio" id="dewey" name="choix" [value]="choix02" (click)="myfunction()">
+		<label id="choix2">COMPILE</label>
+	  </div>
+	  
+	  <div>
+		<input type="radio" id="louie" name="choix" [value]="choix03" (click)="myfunction()">
+		<label id="choix3">INTERPRETE et COMPILE </label>
+	  </div>
+	 
+	  <div>
+		<input type="radio" id="lo" name="choix" value="jenesaispas" (click)="myfunction()">
+		<label id="choix4">Je ne sais pas</label>
+	  </div>
+	</div>
+		  <button type="button" class="btn btn-outline-success" (click)="myfunction()" id="btn" [disabled]="isau">Suivant<i style="font-size:16px;margin-left: 12%;" class="fa">&#xf105;</i></button>
+		  <p id="affichage">Le Test de {{nomQue}} est fini</p>
+	</div>
+	 </div>
+
+</div>
+<div class="description_test">
+   <div class="infoTest">
+	   <p class="quizSe">Quiz:1 Session1</p>
+	   <p class="niveau">Niveau Moyenne</p>
+	</div>
+	<p class="name_Test">SQLI TEST</p>
+	<div class="LeTemps">
+		<p class="qi">Question</p>
+		<span class="tmp"><img src="../public/assets/images/temps.png" class="imges"/> <p class="nbrQ" id="nbrQQ">01/09</p> </span>
+	</div>
+	<div class="LeTemps">
+		<p class="qi">Temps</p>
+		<span class="tmp"><img src="../public/assets/images/quest.png"  class="imges"/> <p class="nbrQ">05:00</p> </span>
+	</div>
+	 <div class="Informations">
+		 <p class="Info"> Informations</p>
+		 <div class="divRepon"><div class="questione qts" >
+		</div><p class="pI">Question Restants</p></div>
+		<div class="divRepon" ><div class="questione qts qtP" style="background-color: #826C01;">
+		</div><p class="pI passe" >Question Passés </p></div>
+		<div class="divRepon"><div class="questione qts" >
+		</div><p class="pI">Test Non Repondu</p></div>
+	 </div>
+</div>
+
+</div>
+
+<p class="resulte" id="res">00/00</p>
+<p class="tps" id="resT">00:00</p>
+
+<div id="divResp">
+
+</div>
+ <div>
+  
+  </div>
+ <div id="divI">
+	 <p class="pAide">Aide :</p>
+	 <img src="assets\suite_Lettre\tsG.PNG" />
+ </div>
+  
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-scale-multiple"
+>
+<p style="font-size: 20px; color: white">{{nomQtest}} Attendez Votre Reponse Aprés {{mm}} s</p>
+</ngx-spinner>
+ </body>
+</html>

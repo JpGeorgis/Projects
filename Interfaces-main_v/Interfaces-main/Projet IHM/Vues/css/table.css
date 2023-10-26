@@ -1,0 +1,62 @@
+section{
+    width: 70vw;
+    margin: auto;
+    margin-top: 5vh;
+    color : #ffffff;
+}
+
+h1{
+    font-size: 3em;
+    margin-left: 10vw;
+}
+
+section {
+    height: auto;
+    margin-bottom: 2vh;
+    z-index: 3
+}
+
+form,
+.inline {
+    display: inline
+}
+
+#bloc_forum {
+    border-radius: 30px;
+    margin: auto;
+    padding: 1vw;
+    background-color: #000000;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 3vh;
+
+   
+}
+tbody{
+    background-color: #5e17eb;
+    font-size: 1.5em;
+
+}
+td,th {
+    padding: 1vw;
+    border-bottom: 4px ridge #000000;
+}
+
+
+thead {
+    color: #03fa6e;
+    font-size: 2em;
+    background-color: #222222;
+
+}
+
+
+
+#forumTable .fil:hover {
+    background-color: #E59820;
+    cursor: pointer
+}

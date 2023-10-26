@@ -1,0 +1,73 @@
+header{
+    height: 10vh;  
+    background-color: #000000;
+}
+body{
+    margin : 0;
+    background-color: #222222;
+    font-family: "Roboto", sans-serif;
+}
+#logo{
+    height: 10vh;
+    margin-left:40%;
+}
+
+#mySidenav{
+    display: none;
+}
+
+#sidenav span {
+    float: left;
+    margin-top: 3.5vh;
+    margin-left: 3vw;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#usercircle span {
+    float: right;
+    margin-top: 3.5vh;
+    margin-right: 3vw;
+    color: #ffffff;
+    font-size: 2.5em;
+}
+
+.sidenav {
+  width: 100%;
+  position: absolute;
+  z-index: 12;
+  top: 10vh;
+  background-color: #000000;
+}
+
+.sidenav .menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  display: block;
+}
+
+.boutons_standardsMenu {
+    border-bottom: 2px solid #ffffff;
+    color: #ffffff;
+    font-family: inherit;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: #03fa6e;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5e17eb;
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    height: 10vh;
+    margin-top: 80vh;
+}
+
+footer p{
+        padding: 2vh;
+}
