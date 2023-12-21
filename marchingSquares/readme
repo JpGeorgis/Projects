@@ -1,0 +1,2 @@
+On passe une image avec des régions de couleur par exemple k.jpg ou l.jpg, 
+et on obtient les résultats MarchingSquaresK.png ou MarchingSquaresL.png, où l'on peut voir les régions surligner en couleur.
